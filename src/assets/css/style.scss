@@ -1,0 +1,479 @@
+$leafsImage: url("../img/flowers-background.svg");
+$fontTitle: url("../fonts/Futura-Bold.otf");
+$fontText: url("../fonts/MyriadPro-Regular.otf");
+
+$white: #fff;
+$grayLight: #f9f9f9;
+$grayCream: #F2F0EB;
+$greenDark: #006241;
+$greenAccent: #018a57;
+$greenDarkDepth: #1E3932;
+$greenText: #1e3932cc;
+
+$imgFlowers: url("../img/flowers-background.svg");
+
+* {
+   padding: 0;
+   margin: 0;
+}
+
+body::-webkit-scrollbar-track {
+   background: $grayLight;
+}
+
+body::-webkit-scrollbar {
+   background: rgba(0, 0, 0, 0);
+   width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: $greenDarkDepth;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+   background: $greenDark;
+}
+
+@font-face {
+   font-family: "Futura-Bold";
+   src: $fontTitle;
+}
+
+@font-face {
+   font-family: "Myriad-Regular";
+   src: $fontText;
+}
+
+body {
+   background-color: $grayLight;
+   font-family: "Myriad-Regular", "Open Sans";
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Futura-Bold";
+}
+
+#root {
+   width: 100%;
+}
+
+
+.section-land {
+
+   &.section-magic {
+      background-image: $imgFlowers;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+   }
+
+   .text-right-land{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+   }
+   h1 {
+      color: $greenDark;
+      letter-spacing: 0.1rem;
+      font-size: 48px;
+      line-height: 3.5rem;
+
+      span {
+         -webkit-text-stroke-width: 2px;
+         color: $grayLight;
+         -webkit-text-stroke-color: $greenDark;
+      }
+   }
+
+   p {
+      font-size: 24px;
+   }
+
+}
+
+.section-land-food {
+
+   &.section-magic {
+      background-color: $greenDark;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+   }
+
+   .text-right-land {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+   }
+
+   h1 {
+      color: $white;
+      letter-spacing: 0.1rem;
+      font-size: 48px;
+      line-height: 3.5rem;
+
+      span {
+         -webkit-text-stroke-width: 2px;
+         color: $greenDark;
+         -webkit-text-stroke-color: $white;
+      }
+   }
+
+   p {
+      font-size: 24px;
+   }
+
+   .btn-outline-light {
+      border: 2px solid $white;
+      background-color: $greenDark;
+      color: $white;
+      border-radius: 50px;
+      font-family: "Futura-Bold";
+      letter-spacing: .2rem;
+      transition: 0.2s ease-in;
+
+      &:hover {
+         border: 2px solid $white;
+         background-color: $white;
+         color: $greenText;
+         transition: 0.2s ease-in;
+      }
+   }
+}
+
+.text-primary {
+   color: $greenDarkDepth !important;
+}
+
+.family-magic {
+   margin: auto;
+}
+
+.navbar {
+   li a {
+      font-family: "Futura-bold";
+      font-size: 16px;
+      color: $greenText !important;
+      transition: 0.2s ease;
+
+      &:hover {
+         transition: 0.2s ease;
+         color: $greenAccent !important;
+      }
+   }
+}
+
+.shoping-cart-icon {
+   fill: $greenDarkDepth;
+
+   &:hover {
+
+      svg > path {
+         fill: $greenAccent;
+         transition: 0.2s ease;
+      }
+   }
+}
+
+.navbar-brand {
+   font-family: "Futura-Bold";
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   color: $greenDarkDepth;
+   font-family: 24px;
+
+   &:hover {
+      color: $greenDarkDepth;
+   } 
+}
+
+.footer {
+   background-color: $greenDark;
+   .navbar {
+      color: $white;
+   }
+
+   li {
+      list-style: none;
+   }
+   a {
+      color: $white;
+      text-decoration: none;
+   }
+   span {
+      color: $white;
+   }
+
+   h6 {
+      color: $white;
+   }
+
+   .icon-social {
+      font-size: 32px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      &:hover {
+         color: $grayCream;
+         transition: 0.2s ease;
+      }
+   }
+}
+
+#hearts-magic {
+   animation: heartsUp 2.2s linear infinite;
+}
+
+#leafs {
+   animation: leafsShake 2.5s linear infinite;
+}
+
+#hand-drink-man,
+#arm-left-girl {
+   animation: armsShakeMan 2.5s ease-out infinite;
+}
+
+#hand-drink-girl,
+#plant-balance {
+   animation: armsShakeGirl 2.5s ease-in-out infinite;
+}
+
+#star-tree-light-share {
+   animation: starLight 3s ease infinite;
+}
+
+#star-light-circle-share {
+   animation: starLightCircle 3s ease infinite;
+}
+
+#star-tree-share {
+   animation: starLightTree 3s ease infinite;
+}
+
+#smoke-coffee-relax {
+   animation: smokeUp 2s ease infinite;
+}
+#star-tree-light-relax {
+   animation: starLightRelax 3s ease infinite !important;
+}
+#star-light-circle-relax {
+   animation: starLightCircleRelax 3s ease infinite !important;
+}
+
+#star-tree-relax {
+   animation: starLightTreeRelax 3s ease infinite !important;
+}
+
+
+@keyframes leafsShake {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   50% {
+      transform: rotate(-.5deg);
+   }
+
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+@keyframes armsShakeMan {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   50% {
+      transform: rotate(-1deg);
+   }
+
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+@keyframes armsShakeGirl {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   50% {
+      transform: rotate(.8deg);
+   }
+
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+@keyframes heartsUp {
+   0% {
+      opacity: 0;
+      transform: translateY(5rem);
+   }
+
+   25% {
+      opacity: .5;
+      transform: translateY(2.5rem);
+   }
+
+   50% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   75% {
+      opacity: .2;
+      transform: translateY(-2.5rem);
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateY(-5rem);
+   }
+}
+
+@keyframes smokeUp {
+   0% {
+      opacity: 0;
+      transform: translateY(0rem);
+   }
+
+   10% {
+      opacity: .5;
+      transform: translateY(-.1rem);
+   }
+
+   20% {
+      opacity: 1;
+      transform: translateY(-.2rem);
+   }
+
+   30% {
+      opacity: 1;
+      transform: translateY(-.3rem);
+   }
+
+   40% {
+      opacity: 1;
+      transform: translateY(-.4rem);
+   }
+
+   50% {
+      opacity: 1;
+      transform: translateY(-.5rem);
+   }
+
+   60% {
+      opacity: 1;
+      transform: translateY(-.6rem);
+   }
+
+   70% {
+      opacity: 1;
+      transform: translateY(-.7rem);
+   }
+
+   80% {
+      opacity: .5;
+      transform: translateY(-.8rem);
+   }
+
+   90% {
+      opacity: .25;
+      transform: translateY(-.9rem);
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateY(-1rem);
+   }
+}
+
+@keyframes starLight {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 1;
+      fill:  rgba(255, 192, 91, 1);
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes starLightCircle {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: .5;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes starLightTree {
+   0% {
+      fill: #F9CC85;
+   }
+
+   50% {
+      fill: #ffc05bd7;
+   }
+
+   100% {
+      fill: #F9CC85;
+   }
+}
+
+@keyframes starLightRelax {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 1;
+      fill: rgba(255, 192, 91, 1);
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes starLightCircleRelax {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: .5;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes starLightTreeRelax {
+   0% {
+      fill: #F9CC85;
+   }
+
+   50% {
+      fill: #ffc05bd7;
+   }
+
+   100% {
+      fill: #F9CC85;
+   }
+}
+
