@@ -14,18 +14,18 @@ let Footer = () => {
             <div className="ml-5 px-0">
                <h6>STARBUCKS</h6>
                <ul className="mb-0">
-                  <li class="nav-item my-3"><a href="nav-link">Nuestra empresa</a></li>
-                  <li class="nav-item my-3"><a href="nav-link">Nuestra herencia</a></li>
-                  <li class="nav-item my-3"><a href="nav-link">Boletines de empresa</a></li>
-                  <li class="nav-item mt-3"><a href="nav-link">Trabaja con nostros</a></li>
+                  <li className="nav-item my-3"><a href="nav-link">Nuestra empresa</a></li>
+                  <li className="nav-item my-3"><a href="nav-link">Nuestra herencia</a></li>
+                  <li className="nav-item my-3"><a href="nav-link">Boletines de empresa</a></li>
+                  <li className="nav-item mt-3"><a href="nav-link">Trabaja con nostros</a></li>
                </ul>
             </div>
             <div className="ml-5 px-0">
                <h6>STARBUCKS REWARDS</h6>
                <ul className="mb-0">
-                  <li class="nav-item my-3"><a href="nav-link">Starbucks rewards</a></li>
-                  <li class="nav-item my-3"><a href="nav-link">Mi cuenta</a></li>
-                  <li class="nav-item my-3"><a href="nav-link">Mas información</a></li>
+                  <li className="nav-item my-3"><a href="nav-link">Starbucks rewards</a></li>
+                  <li className="nav-item my-3"><a href="nav-link">Mi cuenta</a></li>
+                  <li className="nav-item my-3"><a href="nav-link">Mas información</a></li>
                </ul>
             </div>
             <div className="ml-5 px-0 d-flex align-items-center">

@@ -39,18 +39,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Futura-Bold";
 }
 
+.logo-starbucks {
+  width: 64px;
+}
+
 #root {
   width: 100%;
 }
 
-.section-land.section-magic {
+.section-land.section-magic, .section-land-footer.section-magic {
   background-image: url("../img/flowers-background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-.section-land .text-right-land {
+.section-land .text-right-land, .section-land-footer .text-right-land {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,61 +67,46 @@ h1, h2, h3, h4, h5, h6 {
           align-items: flex-end;
 }
 
-.section-land h1 {
+.section-land h1, .section-land-footer h1 {
   color: #006241;
   letter-spacing: 0.1rem;
   font-size: 48px;
   line-height: 3.5rem;
 }
 
-.section-land h1 span {
+.section-land h1 span, .section-land-footer h1 span {
   -webkit-text-stroke-width: 2px;
   color: #f9f9f9;
   -webkit-text-stroke-color: #006241;
 }
 
-.section-land p {
+.section-land p, .section-land-footer p {
   font-size: 24px;
 }
 
-.section-land-food.section-magic {
+.section-land-footer {
   background-color: #006241;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-image: none !important;
 }
 
-.section-land-food .text-right-land {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.section-land-food h1 {
+.section-land-footer h1 {
   color: #fff;
   letter-spacing: 0.1rem;
   font-size: 48px;
   line-height: 3.5rem;
 }
 
-.section-land-food h1 span {
+.section-land-footer h1 span {
   -webkit-text-stroke-width: 2px;
   color: #006241;
   -webkit-text-stroke-color: #fff;
 }
 
-.section-land-food p {
+.section-land-footer p {
   font-size: 24px;
 }
 
-.section-land-food .btn-outline-light {
+.section-land-footer .btn-outline-light {
   border: 2px solid #fff;
   background-color: #006241;
   color: #fff;
@@ -128,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.2s ease-in;
 }
 
-.section-land-food .btn-outline-light:hover {
+.section-land-footer .btn-outline-light:hover {
   border: 2px solid #fff;
   background-color: #fff;
   color: #1e3932cc;
@@ -158,14 +147,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #018a57 !important;
 }
 
-.shoping-cart-icon {
+.navbar a.active {
+  color: #018a57 !important;
+}
+
+.shoping-cart-icon svg path {
   fill: #1E3932;
 }
 
-.shoping-cart-icon:hover svg > path {
+.shoping-cart-icon:hover svg path {
   fill: #018a57;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+}
+
+.shoping-cart-icon.active svg path {
+  fill: #018a57 !important;
 }
 
 .navbar-brand {
@@ -239,10 +236,14 @@ h1, h2, h3, h4, h5, h6 {
           animation: armsShakeMan 2.5s ease-out infinite;
 }
 
-#hand-drink-girl,
-#plant-balance {
+#hand-drink-girl {
   -webkit-animation: armsShakeGirl 2.5s ease-in-out infinite;
           animation: armsShakeGirl 2.5s ease-in-out infinite;
+}
+
+#plant-balance {
+  -webkit-animation: armsShakePlant 2.5s ease-in-out infinite;
+          animation: armsShakePlant 2.5s ease-in-out infinite;
 }
 
 #star-tree-light-share {
@@ -363,6 +364,36 @@ h1, h2, h3, h4, h5, h6 {
   50% {
     -webkit-transform: rotate(0.8deg);
             transform: rotate(0.8deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes armsShakePlant {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes armsShakePlant {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -687,6 +718,31 @@ h1, h2, h3, h4, h5, h6 {
   }
   100% {
     fill: #F9CC85;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .logo-starbucks {
+    width: 32px;
+  }
+  .section-land h1, .section-land-footer h1 {
+    font-size: 24px;
+    line-height: 2rem;
+  }
+  .section-land p, .section-land-footer p {
+    font-size: 16px;
+  }
+  .cont-text-land {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
