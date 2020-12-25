@@ -47,12 +47,29 @@ body::-webkit-scrollbar-thumb:hover {
 body {
    background-color: $grayLight;
    font-family: "Myriad-Regular", "Open Sans";
+   overflow-x: hidden;
+   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
    font-family: "Futura-Bold";
 }
 
+a {
+   cursor: pointer;
+}
+
+.bg-primary {
+   background-color: $greenDark !important;
+}
+.bg-light {
+   background-color: $grayLight;
+}
 .logo-starbucks {
    width: 64px;
 }
@@ -61,10 +78,25 @@ h1, h2, h3, h4, h5, h6 {
    width: 100%;
 }
 
+.page {
+   background-color: #f9f9f9;
+   transition: 0.1 ease;
+   animation: showPage 2s ease;
+}
 
-.section-land, .section-land-footer {
+@keyframes showPage {
+   from {
+      clip-path: circle(10% at top right);
+   }
+   to {
+      clip-path: circle(200% at top right);
+   }
+}
 
-   &.section-magic {
+.section-land,
+.section-land-footer {
+
+   &.section-magic, &.section-share {
       background-image: $imgFlowers;
       background-position: center;
       background-repeat: no-repeat;
@@ -72,11 +104,12 @@ h1, h2, h3, h4, h5, h6 {
    }
 
 
-   .text-right-land{
+   .text-right-land {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
    }
+
    h1 {
       color: $greenDark;
       letter-spacing: 0.1rem;
@@ -94,6 +127,13 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 24px;
    }
 
+}
+
+.mobile-ul {
+   & > a {
+      width: 100%;
+      border-bottom: 1px solid $grayCream;
+   }
 }
 
 .section-land-footer {
@@ -143,10 +183,18 @@ h1, h2, h3, h4, h5, h6 {
    margin: auto;
 }
 
-.navbar {
-   li a {
-      font-family: "Futura-bold";
-      font-size: 16px;
+.navbar-nav {
+   a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   a:hover {
+      border-bottom: none;
+   }
+   a > li > a {
+      font-family: "Futura-bold" !important;
+      font-size: 16px !important;
       color: $greenText !important;
       transition: 0.2s ease;
 
@@ -156,16 +204,21 @@ h1, h2, h3, h4, h5, h6 {
       }
    }
 
-   a.active {
+   li.active > a {
       color: $greenAccent !important;
    }
 
 }
 
 .shoping-cart-icon {
-  svg path {
-   fill: $greenDarkDepth;
-  } 
+
+   svg {
+      width: 32px;
+   }
+
+   svg path {
+      fill: $greenDarkDepth;
+   }
 
    &:hover svg path {
       fill: $greenAccent;
@@ -187,11 +240,12 @@ h1, h2, h3, h4, h5, h6 {
 
    &:hover {
       color: $greenDarkDepth;
-   } 
+   }
 }
 
 .footer {
    background-color: $greenDark;
+
    .navbar {
       color: $white;
    }
@@ -199,12 +253,15 @@ h1, h2, h3, h4, h5, h6 {
    li {
       list-style: none;
    }
+
    a {
       color: $white;
       text-decoration: none;
    }
+
    span {
       color: $white;
+      font-size: 12px;
    }
 
    h6 {
@@ -215,12 +272,60 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 32px;
       cursor: pointer;
       transition: 0.2s ease;
+
       &:hover {
          color: $grayCream;
          transition: 0.2s ease;
       }
    }
+
+   .cont-menu {
+      margin-left: 3rem;
+      text-align: left;
+   }
 }
+
+.btnMenu {
+   color: $greenText;
+   position: relative;
+   width: 40px !important;
+   height: 40px !important;
+   border-radius: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &:hover {
+      color: $greenAccent;
+   }
+   z-index: 101;
+}
+
+.contBtnCloseMenu {
+}
+
+.hideNavBar {
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   right: 0%;
+   animation: hideMenu 0s linear 1s forwards;
+   transition: clip-path 1s ease;
+   clip-path: circle(0% at top right);
+   z-index: 100;
+}
+
+.showNavBar {
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   right: 0%;
+   transition: clip-path 1s ease;
+   clip-path: circle(200% at top right);
+   z-index: 100;
+}
+
 
 #hearts-magic {
    animation: heartsUp 2.2s linear infinite;
@@ -258,9 +363,11 @@ h1, h2, h3, h4, h5, h6 {
 #smoke-coffee-relax {
    animation: smokeUp 2s ease infinite;
 }
+
 #star-tree-light-relax {
    animation: starLightRelax 3s ease infinite !important;
 }
+
 #star-light-circle-relax {
    animation: starLightCircleRelax 3s ease infinite !important;
 }
@@ -269,6 +376,16 @@ h1, h2, h3, h4, h5, h6 {
    animation: starLightTreeRelax 3s ease infinite !important;
 }
 
+@keyframes hideMenu {
+   to {
+      transform: scale(0);
+   }
+}
+@keyframes showMenu {
+   to {
+      display: none;
+   }
+}
 
 @keyframes leafsShake {
    0% {
@@ -417,7 +534,7 @@ h1, h2, h3, h4, h5, h6 {
 
    50% {
       opacity: 1;
-      fill:  rgba(255, 192, 91, 1);
+      fill: rgba(255, 192, 91, 1);
    }
 
    100% {
@@ -501,7 +618,8 @@ h1, h2, h3, h4, h5, h6 {
       width: 32px;
    }
 
-   .section-land, .section-land-footer {
+   .section-land,
+   .section-land-footer {
       h1 {
          font-size: 24px;
          line-height: 2rem;
@@ -518,4 +636,39 @@ h1, h2, h3, h4, h5, h6 {
       align-items: center !important;
    }
 
+   .section-share {
+      transform: scale(1, -1);
+
+      .container>.row>div {
+         transform: scale(1, -1);
+      }
+   }
+
+   .wave-light {
+      transform: translateY(-2px);
+   }
+
+   .curve-circle {
+      transform: translateY(5px);
+   }
+
+   .footer {
+      .cont-menu {
+         margin-left: 0rem;
+         text-align: center;
+         margin-top: 3rem;
+      }
+   }
+
+   .cont-cart-menu {
+      display: flex;
+      align-items: center;
+   }
+   .shoping-cart-icon {
+
+      svg {
+         width: 24px;
+      }
+
+   }
 }
