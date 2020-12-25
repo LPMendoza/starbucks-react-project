@@ -11,7 +11,7 @@ let Home = () => {
             <article className="section-land section-magic">
                <div className="container">
                   <div className="row align-items-center justify-content-center">
-                     <div className="cont-text-land col-12 col-md-6 px-0 text-center text-md-left">
+                     <div className="cont-text-land col-12 col-md-6 px-2 px-md-0 text-center text-md-left">
                         <h1>VIVIR ESTA ÉPOCA CONTIGO ES <span>¡MÁGICO!</span></h1>
                         <p className="text-primary mt-4 col-9 col-md-9 px-0">En estas fiestas comparte todo tu amor y cariño con tu familia y amigos en starbucks</p>
                      </div>
@@ -1122,7 +1122,7 @@ let Home = () => {
             <article className="section-land section-share mt-5">
                <div className="container">
                   <div className="row align-items-center justify-content-center">
-                     <div className="col-10 col-md-6 px-0">
+                     <div className="col-10 col-md-6 px-2 px-md-0 ">
                         <svg className="img-fluid" viewBox="0 0 520 492" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <g id="sharing-image">
                               <g id="Group 110">
@@ -1694,7 +1694,7 @@ let Home = () => {
                </svg>
                <div className="container mt-5">
                   <div className="row align-items-center justify-content-center">
-                     <div className="cont-text-land col-12 col-md-6 px-0 text-center text-md-left">
+                     <div className="cont-text-land col-12 col-md-6 px-2 px-md-0 text-center text-md-left">
                         <h1>¡ENTRA YA Y CONOCOCE NUESTRO <span>MENÚ!</span></h1>
                         <p className="text-light mt-4 col-9 col-md-9 px-0">Conoce y adquiere nuestros productos en el menú ahora mismo para comenzar estas fechas de lo mejor</p>
                         <Link to={`${basePath}/menu`}>

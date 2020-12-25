@@ -46,6 +46,10 @@ h6 {
   font-family: "Futura-Bold";
 }
 
+h2, h3, h4, h5, h6 {
+  color: #1e3932cc;
+}
+
 a {
   cursor: pointer;
 }
@@ -55,7 +59,11 @@ a {
 }
 
 .bg-light {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9 !important;
+}
+
+.bg-light-cream {
+  background-color: #F2F0EB !important;
 }
 
 .logo-starbucks {
@@ -70,29 +78,25 @@ a {
   background-color: #f9f9f9;
   -webkit-transition: 0.1 ease;
   transition: 0.1 ease;
-  -webkit-animation: showPage 2s ease;
-          animation: showPage 2s ease;
+  -webkit-animation: showPage 1s ease;
+          animation: showPage 1s ease;
 }
 
 @-webkit-keyframes showPage {
   from {
-    -webkit-clip-path: circle(10% at top right);
-            clip-path: circle(10% at top right);
+    opacity: 0;
   }
   to {
-    -webkit-clip-path: circle(200% at top right);
-            clip-path: circle(200% at top right);
+    opacity: 1;
   }
 }
 
 @keyframes showPage {
   from {
-    -webkit-clip-path: circle(10% at top right);
-            clip-path: circle(10% at top right);
+    opacity: 0;
   }
   to {
-    -webkit-clip-path: circle(200% at top right);
-            clip-path: circle(200% at top right);
+    opacity: 1;
   }
 }
 
@@ -146,7 +150,10 @@ a {
 
 .section-land-footer {
   background-color: #006241;
-  background-image: none !important;
+  background-image: url("../img/flowers-background-green.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .section-land-footer h1 {
@@ -228,7 +235,7 @@ a {
 }
 
 .shoping-cart-icon svg {
-  width: 32px;
+  width: 24px;
 }
 
 .shoping-cart-icon svg path {
@@ -243,6 +250,15 @@ a {
 
 .shoping-cart-icon.active svg path {
   fill: #018a57 !important;
+}
+
+.cont-cart-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar-brand {
@@ -358,6 +374,69 @@ a {
   -webkit-clip-path: circle(200% at top right);
           clip-path: circle(200% at top right);
   z-index: 100;
+}
+
+.wave-circle {
+  margin-top: 5rem;
+}
+
+.article-menu {
+  background-image: url("../img/flowers-background-green.svg");
+  background-size: 100%;
+  background-position: top;
+}
+
+.cont-cards-menu {
+  border-radius: 30px;
+  margin-top: -12rem !important;
+}
+
+.cont-cards-menu .cont-menu-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background-color: #1E3932;
+}
+
+.cont-cards-menu .cont-menu-img:hover {
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont-cards-menu .cont-menu-img .imgMenuBackground {
+  width: 100%;
+  height: 320px;
+  border-radius: 30px;
+  background-color: #1e3932cc;
+  background-position: center;
+  background-size: 520px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  cursor: pointer;
+}
+
+.cont-cards-menu .cont-menu-img:hover .imgMenuBackground {
+  background-position: center 50%;
+  background-size: 720px;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+
+.cont-cards-menu .menu-item-name {
+  text-transform: uppercase;
+  position: absolute;
+  cursor: pointer;
 }
 
 #hearts-magic {
@@ -816,26 +895,38 @@ a {
 @-webkit-keyframes starLightRelax {
   0% {
     opacity: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   50% {
     opacity: 1;
     fill: #ffc05b;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   100% {
     opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 @keyframes starLightRelax {
   0% {
     opacity: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   50% {
     opacity: 1;
     fill: #ffc05b;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   100% {
     opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
@@ -887,14 +978,22 @@ a {
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 720px) {
   .logo-starbucks {
     width: 32px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 1.5rem;
   }
   .section-land h1,
   .section-land-footer h1 {
     font-size: 24px;
     line-height: 2rem;
+  }
+  .section-land h1 span,
+  .section-land-footer h1 span {
+    -webkit-text-stroke-width: 1px;
   }
   .section-land p,
   .section-land-footer p {
@@ -928,18 +1027,17 @@ a {
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
   }
+  .wave-circle {
+    margin-top: 3rem;
+  }
+  .cont-cards-menu {
+    border-radius: 30px;
+    margin-top: -6rem !important;
+  }
   .footer .cont-menu {
     margin-left: 0rem;
     text-align: center;
     margin-top: 3rem;
-  }
-  .cont-cart-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .shoping-cart-icon svg {
     width: 24px;
