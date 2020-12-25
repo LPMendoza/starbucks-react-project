@@ -33,24 +33,80 @@ body::-webkit-scrollbar-thumb:hover {
 body {
   background-color: #f9f9f9;
   font-family: "Myriad-Regular", "Open Sans";
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Futura-Bold";
+}
+
+a {
+  cursor: pointer;
+}
+
+.bg-primary {
+  background-color: #006241 !important;
+}
+
+.bg-light {
+  background-color: #f9f9f9;
+}
+
+.logo-starbucks {
+  width: 64px;
 }
 
 #root {
   width: 100%;
 }
 
-.section-land.section-magic {
+.page {
+  background-color: #f9f9f9;
+  -webkit-transition: 0.1 ease;
+  transition: 0.1 ease;
+  -webkit-animation: showPage 2s ease;
+          animation: showPage 2s ease;
+}
+
+@-webkit-keyframes showPage {
+  from {
+    -webkit-clip-path: circle(10% at top right);
+            clip-path: circle(10% at top right);
+  }
+  to {
+    -webkit-clip-path: circle(200% at top right);
+            clip-path: circle(200% at top right);
+  }
+}
+
+@keyframes showPage {
+  from {
+    -webkit-clip-path: circle(10% at top right);
+            clip-path: circle(10% at top right);
+  }
+  to {
+    -webkit-clip-path: circle(200% at top right);
+            clip-path: circle(200% at top right);
+  }
+}
+
+.section-land.section-magic, .section-land.section-share,
+.section-land-footer.section-magic,
+.section-land-footer.section-share {
   background-image: url("../img/flowers-background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-.section-land .text-right-land {
+.section-land .text-right-land,
+.section-land-footer .text-right-land {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,61 +119,54 @@ h1, h2, h3, h4, h5, h6 {
           align-items: flex-end;
 }
 
-.section-land h1 {
+.section-land h1,
+.section-land-footer h1 {
   color: #006241;
   letter-spacing: 0.1rem;
   font-size: 48px;
   line-height: 3.5rem;
 }
 
-.section-land h1 span {
+.section-land h1 span,
+.section-land-footer h1 span {
   -webkit-text-stroke-width: 2px;
   color: #f9f9f9;
   -webkit-text-stroke-color: #006241;
 }
 
-.section-land p {
+.section-land p,
+.section-land-footer p {
   font-size: 24px;
 }
 
-.section-land-food.section-magic {
+.mobile-ul > a {
+  width: 100%;
+  border-bottom: 1px solid #F2F0EB;
+}
+
+.section-land-footer {
   background-color: #006241;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-image: none !important;
 }
 
-.section-land-food .text-right-land {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.section-land-food h1 {
+.section-land-footer h1 {
   color: #fff;
   letter-spacing: 0.1rem;
   font-size: 48px;
   line-height: 3.5rem;
 }
 
-.section-land-food h1 span {
+.section-land-footer h1 span {
   -webkit-text-stroke-width: 2px;
   color: #006241;
   -webkit-text-stroke-color: #fff;
 }
 
-.section-land-food p {
+.section-land-footer p {
   font-size: 24px;
 }
 
-.section-land-food .btn-outline-light {
+.section-land-footer .btn-outline-light {
   border: 2px solid #fff;
   background-color: #006241;
   color: #fff;
@@ -128,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.2s ease-in;
 }
 
-.section-land-food .btn-outline-light:hover {
+.section-land-footer .btn-outline-light:hover {
   border: 2px solid #fff;
   background-color: #fff;
   color: #1e3932cc;
@@ -144,28 +193,56 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
-.navbar li a {
-  font-family: "Futura-bold";
-  font-size: 16px;
+.navbar-nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-nav a:hover {
+  border-bottom: none;
+}
+
+.navbar-nav a > li > a {
+  font-family: "Futura-bold" !important;
+  font-size: 16px !important;
   color: #1e3932cc !important;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
-.navbar li a:hover {
+.navbar-nav a > li > a:hover {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   color: #018a57 !important;
 }
 
-.shoping-cart-icon {
+.navbar-nav li.active > a {
+  color: #018a57 !important;
+}
+
+.shoping-cart-icon svg {
+  width: 32px;
+}
+
+.shoping-cart-icon svg path {
   fill: #1E3932;
 }
 
-.shoping-cart-icon:hover svg > path {
+.shoping-cart-icon:hover svg path {
   fill: #018a57;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+}
+
+.shoping-cart-icon.active svg path {
+  fill: #018a57 !important;
 }
 
 .navbar-brand {
@@ -204,6 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer span {
   color: #fff;
+  font-size: 12px;
 }
 
 .footer h6 {
@@ -223,6 +301,65 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.2s ease;
 }
 
+.footer .cont-menu {
+  margin-left: 3rem;
+  text-align: left;
+}
+
+.btnMenu {
+  color: #1e3932cc;
+  position: relative;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 101;
+}
+
+.btnMenu:hover {
+  color: #018a57;
+}
+
+.hideNavBar {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  -webkit-animation: hideMenu 0s linear 1s forwards;
+          animation: hideMenu 0s linear 1s forwards;
+  -webkit-transition: -webkit-clip-path 1s ease;
+  transition: -webkit-clip-path 1s ease;
+  transition: clip-path 1s ease;
+  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+  -webkit-clip-path: circle(0% at top right);
+          clip-path: circle(0% at top right);
+  z-index: 100;
+}
+
+.showNavBar {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  -webkit-transition: -webkit-clip-path 1s ease;
+  transition: -webkit-clip-path 1s ease;
+  transition: clip-path 1s ease;
+  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+  -webkit-clip-path: circle(200% at top right);
+          clip-path: circle(200% at top right);
+  z-index: 100;
+}
+
 #hearts-magic {
   -webkit-animation: heartsUp 2.2s linear infinite;
           animation: heartsUp 2.2s linear infinite;
@@ -239,10 +376,14 @@ h1, h2, h3, h4, h5, h6 {
           animation: armsShakeMan 2.5s ease-out infinite;
 }
 
-#hand-drink-girl,
-#plant-balance {
+#hand-drink-girl {
   -webkit-animation: armsShakeGirl 2.5s ease-in-out infinite;
           animation: armsShakeGirl 2.5s ease-in-out infinite;
+}
+
+#plant-balance {
+  -webkit-animation: armsShakePlant 2.5s ease-in-out infinite;
+          animation: armsShakePlant 2.5s ease-in-out infinite;
 }
 
 #star-tree-light-share {
@@ -278,6 +419,32 @@ h1, h2, h3, h4, h5, h6 {
 #star-tree-relax {
   -webkit-animation: starLightTreeRelax 3s ease infinite !important;
           animation: starLightTreeRelax 3s ease infinite !important;
+}
+
+@-webkit-keyframes hideMenu {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes hideMenu {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes showMenu {
+  to {
+    display: none;
+  }
+}
+
+@keyframes showMenu {
+  to {
+    display: none;
+  }
 }
 
 @-webkit-keyframes leafsShake {
@@ -363,6 +530,36 @@ h1, h2, h3, h4, h5, h6 {
   50% {
     -webkit-transform: rotate(0.8deg);
             transform: rotate(0.8deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes armsShakePlant {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes armsShakePlant {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -687,6 +884,65 @@ h1, h2, h3, h4, h5, h6 {
   }
   100% {
     fill: #F9CC85;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .logo-starbucks {
+    width: 32px;
+  }
+  .section-land h1,
+  .section-land-footer h1 {
+    font-size: 24px;
+    line-height: 2rem;
+  }
+  .section-land p,
+  .section-land-footer p {
+    font-size: 16px;
+  }
+  .cont-text-land {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .section-share {
+    -webkit-transform: scale(1, -1);
+            transform: scale(1, -1);
+  }
+  .section-share .container > .row > div {
+    -webkit-transform: scale(1, -1);
+            transform: scale(1, -1);
+  }
+  .wave-light {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  .curve-circle {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .footer .cont-menu {
+    margin-left: 0rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .cont-cart-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .shoping-cart-icon svg {
+    width: 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */
