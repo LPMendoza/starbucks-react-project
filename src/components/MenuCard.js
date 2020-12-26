@@ -1,8 +1,8 @@
 import React from 'react';
 
-let MenuCard = ({menuItem}) => {
+let MenuCard = ({ menuItem, handleOnClick}) => {
    return (
-      <div className="col-12 col-md-6 col-lg-4 my-3 card-menu">
+      <div onClick={(e) => handleOnClick(false)} className="col-12 col-md-6 col-lg-4 my-3 card-menu">
          <div className="cont-menu-img shadow">
             <div className="imgMenuBackground" style={{ backgroundImage: `url(${menuItem.imgMenu})` }}>
             </div>

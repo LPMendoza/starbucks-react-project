@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from '../components/NavBar.js';
 import { Link } from 'react-router-dom';
-import { basePath } from '../config.js';
+import config from '../config.js';
 
 let Home = () => {
    return (
@@ -1697,7 +1697,7 @@ let Home = () => {
                      <div className="cont-text-land col-12 col-md-6 px-2 px-md-0 text-center text-md-left">
                         <h1>¡ENTRA YA Y CONOCOCE NUESTRO <span>MENÚ!</span></h1>
                         <p className="text-light mt-4 col-9 col-md-9 px-0">Conoce y adquiere nuestros productos en el menú ahora mismo para comenzar estas fechas de lo mejor</p>
-                        <Link to={`${basePath}/menu`}>
+                        <Link to={`${config.basePath}/menu`}>
                            <button onClick={(e) => window.scrollTo(0, 0)} type="button" className="btn btn-outline-light py-4 col-12 col-md-7 my-5">ENTRAR AL MENÚ <span className="fas fa-arrow-right ml-2"></span></button>
                         </Link>
                      </div>
