@@ -14,6 +14,7 @@ $greenClip: rgba(18, 32, 29, 0.822);
 $greenText: #1e3932cc;
 
 $imgFlowers: url("../img/flowers-background.svg");
+$imgFlowersLight: url("../img/flowers-background-light.svg");
 $imgFlowersGreen: url("../img/flowers-background-green.svg");
 
 * {
@@ -94,6 +95,19 @@ button:focus {
       border: none;
       background-color: #f5f5f5 !important;
    }
+}
+
+.fill-primary {
+   fill: $greenDark;
+}
+
+
+.fill-gray-cream {
+   fill: $grayCream;
+}
+
+.fill-gray {
+   fill: $grayLight;
 }
 
 .btn-primary {
@@ -348,9 +362,6 @@ button:focus {
    justify-content: center;
    align-items: center;
    font-size: 24px;
-   &:hover {
-      color: $greenAccent;
-   }
    z-index: 101;
 }
 
@@ -383,18 +394,23 @@ button:focus {
 }
 
 .article-menu {
-   // background-image: $imgFlowersGreen;
+   background-image: $imgFlowersLight;
    background-size: 100%;
+   background-repeat: no-repeat;
    background-position: center;
 }
 
 .cont-cards-menu {
    border-radius: 30px;
-   margin-top: -12rem !important;
+   margin-top: 0rem !important;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 
    .card-menu {
       animation: showProduct 0.4s ease;
    }
+   
    .cont-menu-img {
       display: flex;
       justify-content: center;
@@ -413,7 +429,7 @@ button:focus {
          border-radius: 30px;
          background-color: $greenText;
          background-position: center;
-         background-size: 520px;
+         background-size: 150%;
          filter: brightness(80%);
          transition: 0.8s ease;
          cursor: pointer;
@@ -426,13 +442,14 @@ button:focus {
          background-size: 720px;
          transition: 0.8s ease;
       }
+         transform: translateY(-.5rem);
+
    }
 
    .menu-item-name {
       text-transform: uppercase;
       position: absolute;
       cursor: pointer;
-
    }
 }
 
@@ -452,8 +469,9 @@ button:focus {
    justify-content: space-between;
    flex-wrap: wrap;
    font-size: 16px !important;
-   font-family: "Futura-Bold" !important;
+   font-family: "Myriad-Regular";
    color: $greenText;
+   
    label {
       margin-bottom: 0 !important;
    }
@@ -472,6 +490,7 @@ button:focus {
             background-color: transparent;
             border: none;
             color: $greenText;
+            font-weight: bold;
 
             &:focus {
                outline: none;
@@ -489,6 +508,7 @@ button:focus {
          background-color: transparent;
          border: none;
          color: $greenText;
+         font-weight: bold;
          height: 40px;
          transition: 0.2s ease;
          -moz-appearance:none;
@@ -515,7 +535,8 @@ button:focus {
 }
 
 .card-product {
-   background-color: $white;
+   background: $white;
+   min-width: 256px;
    min-height: 360px;
    margin: 1rem;
    border-radius: 40px;
@@ -523,20 +544,26 @@ button:focus {
    justify-content: space-around;
    flex-direction: column;
    position: relative;
-   cursor: pointer;
+   //cursor: pointer;
    transition: 0.2s ease;
    animation: showProduct .4s ease;
 
    &:hover {
-      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1) !important;
       transition: 0.2s ease;
-      transform: translateY(-1rem);
+      transform: translateY(-.5rem);
+
+      .circle-img {
+         background-color: $greenDarkAccent;
+         transition: 0.2s ease;
+      }
    }
 
    .product-name-card {
-      font-size: 16px;
+      font-size: 18px;
       color: $greenDarkAccent;
-      font-family: "Futura-Bold";
+      font-family: "Myriad-Regular";
+      font-weight: bold;
       height: 48px;
    }
 
@@ -583,6 +610,14 @@ button:focus {
       width: 32px;
    }
 
+}
+
+.fa-bars {
+   animation: flipBars 0.2s ease forwards;
+}
+
+.fa-times {
+   animation: flipTimes 0.2s ease;
 }
 
 
@@ -633,6 +668,22 @@ button:focus {
 
 #star-tree-relax {
    animation: starLightTreeRelax 3s ease infinite !important;
+}
+
+@keyframes flipBars {
+   from {
+   }
+   to {
+      transform: rotate(-180deg);
+   }
+}
+
+@keyframes flipTimes {
+   from {
+   }
+   to {
+      transform: rotate(180deg);
+   }
 }
 
 @keyframes showPage {
@@ -896,11 +947,26 @@ button:focus {
    }
 }
 
+@media screen and (max-width: 1196px) {
+   .cont-cards-menu {
+      margin-top: 0rem !important;
+   }
+
+   .cont-card-product {
+      display: flex;
+      justify-content: center;
+      margin: 0rem 1rem;
+   }
+}
+
 @media screen and (max-width: 720px) {
    .logo-starbucks {
       width: 32px;
    }
-
+   .card-product {
+      min-width: 256px !important;
+      max-width: 256px !important;
+   }
    h3 {
       font-size: 18px;
       line-height: 1.5rem;
@@ -952,7 +1018,6 @@ button:focus {
 
    .cont-cards-menu {
       border-radius: 30px;
-      margin-top: -6rem !important;
    }
 
    .footer {

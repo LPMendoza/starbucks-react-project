@@ -81,6 +81,18 @@ button:focus {
   background-color: #f5f5f5 !important;
 }
 
+.fill-primary {
+  fill: #006241;
+}
+
+.fill-gray-cream {
+  fill: #F2F0EB;
+}
+
+.fill-gray {
+  fill: #f9f9f9;
+}
+
 .btn-primary {
   background-color: #018a57 !important;
   border: none;
@@ -367,10 +379,6 @@ button:focus {
   z-index: 101;
 }
 
-.btnMenu:hover {
-  color: #018a57;
-}
-
 .hideNavBar {
   width: 100%;
   height: 100vh;
@@ -408,13 +416,23 @@ button:focus {
 }
 
 .article-menu {
+  background-image: url("../img/flowers-background-light.svg");
   background-size: 100%;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 .cont-cards-menu {
   border-radius: 30px;
-  margin-top: -12rem !important;
+  margin-top: 0rem !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cont-cards-menu .card-menu {
@@ -449,12 +467,17 @@ button:focus {
   border-radius: 30px;
   background-color: #1e3932cc;
   background-position: center;
-  background-size: 520px;
+  background-size: 150%;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
   -webkit-transition: 0.8s ease;
   transition: 0.8s ease;
   cursor: pointer;
+}
+
+.cont-cards-menu .cont-menu-img:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 .cont-cards-menu .cont-menu-img:hover .imgMenuBackground {
@@ -493,7 +516,7 @@ button:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 16px !important;
-  font-family: "Futura-Bold" !important;
+  font-family: "Myriad-Regular";
   color: #1e3932cc;
 }
 
@@ -523,6 +546,7 @@ button:focus {
   background-color: transparent;
   border: none;
   color: #1e3932cc;
+  font-weight: bold;
 }
 
 .ctrlProducts .cont-filter-menu .cont-search input:focus {
@@ -537,6 +561,7 @@ button:focus {
   background-color: transparent;
   border: none;
   color: #1e3932cc;
+  font-weight: bold;
   height: 40px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -563,7 +588,8 @@ button:focus {
 }
 
 .card-product {
-  background-color: #fff;
+  background: #fff;
+  min-width: 256px;
   min-height: 360px;
   margin: 1rem;
   border-radius: 40px;
@@ -577,7 +603,6 @@ button:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  cursor: pointer;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   -webkit-animation: showProduct .4s ease;
@@ -585,18 +610,25 @@ button:focus {
 }
 
 .card-product:hover {
-  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1) !important;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.card-product:hover .circle-img {
+  background-color: #00754A;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .card-product .product-name-card {
-  font-size: 16px;
+  font-size: 18px;
   color: #00754A;
-  font-family: "Futura-Bold";
+  font-family: "Myriad-Regular";
+  font-weight: bold;
   height: 48px;
 }
 
@@ -649,6 +681,16 @@ button:focus {
 
 .card-product .cart-plus {
   width: 32px;
+}
+
+.fa-bars {
+  -webkit-animation: flipBars 0.2s ease forwards;
+          animation: flipBars 0.2s ease forwards;
+}
+
+.fa-times {
+  -webkit-animation: flipTimes 0.2s ease;
+          animation: flipTimes 0.2s ease;
 }
 
 #hearts-magic {
@@ -710,6 +752,42 @@ button:focus {
 #star-tree-relax {
   -webkit-animation: starLightTreeRelax 3s ease infinite !important;
           animation: starLightTreeRelax 3s ease infinite !important;
+}
+
+@-webkit-keyframes flipBars {
+  from {
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@keyframes flipBars {
+  from {
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@-webkit-keyframes flipTimes {
+  from {
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes flipTimes {
+  from {
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 @-webkit-keyframes showPage {
@@ -1226,9 +1304,28 @@ button:focus {
   }
 }
 
+@media screen and (max-width: 1196px) {
+  .cont-cards-menu {
+    margin-top: 0rem !important;
+  }
+  .cont-card-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0rem 1rem;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .logo-starbucks {
     width: 32px;
+  }
+  .card-product {
+    min-width: 256px !important;
+    max-width: 256px !important;
   }
   h3 {
     font-size: 18px;
@@ -1280,7 +1377,6 @@ button:focus {
   }
   .cont-cards-menu {
     border-radius: 30px;
-    margin-top: -6rem !important;
   }
   .footer .cont-menu {
     margin-left: 0rem;
