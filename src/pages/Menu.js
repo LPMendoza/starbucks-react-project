@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar.js';
 import MenuCard from '../components/MenuCard.js';
 import ProductCard from '../components/ProductCard.js';
 import imgMenu from "../assets/img/lading/img-banner-menu.png";
+import arrowSelect from '../assets/img/icons/arrow-select.png';
 import config from '../config.js';
 
 let Menu = () => {
@@ -24,11 +25,14 @@ let Menu = () => {
             </div>
             <div className="cont-filter-menu mt-4 mb-5 my-md-0 col-12 col-md-auto px-0">
 
-               <select className="pl-3 pr-5 col-12 col-md-auto mb-2 mr-md-3 mb-md-auto rounded-pill bg-light">
-                  <option value="relevancia" defaultChecked>Relevancia</option>
-                  <option value="upper">Mayor a menor precio</option>
-                  <option value="lower">Menor a mayor precio</option>
-               </select>
+               <div className="cont-select  col-12 col-md-auto mb-2 mr-md-3 mb-md-auto px-0">
+                  <select className="rounded-pill bg-light pl-3 pr-5 col-12">
+                     <option value="relevancia" defaultChecked>Relevancia</option>
+                     <option value="upper">Mayor a menor precio</option>
+                     <option value="lower">Menor a mayor precio</option>
+                  </select>
+                  <img src={arrowSelect} />
+               </div>
                <div className="cont-search px-2 col-12 col-md-auto rounded-pill bg-light">
                   <input type="text" className="ml-2" placeholder="Buscar..." required/>
                   <span class="fas fa-search mx-2"></span>
@@ -40,7 +44,7 @@ let Menu = () => {
    return (
       <React.Fragment>
          <NavBar pageActive={"menu"} />
-         <section className="page bg-light-cream">
+         <section className="page bg-light-cream page-menu">
             <article className="section-land section-magic mb-0 bg-light">
                <div className="container">
                   <div className="row align-items-center justify-content-center">

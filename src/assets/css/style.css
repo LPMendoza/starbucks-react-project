@@ -54,6 +54,10 @@ a {
   cursor: pointer;
 }
 
+a:focus {
+  outline: none;
+}
+
 button:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -108,7 +112,7 @@ button:focus {
 }
 
 .logo-starbucks {
-  width: 64px;
+  width: 48px;
 }
 
 #root {
@@ -166,14 +170,8 @@ button:focus {
   font-size: 24px;
 }
 
-.mobile-ul > a {
-  width: 100%;
-  border-bottom: 1px solid #F2F0EB;
-}
-
 .section-land-footer {
   background-color: #006241;
-  background-image: url("../img/flowers-background-green.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -221,6 +219,16 @@ button:focus {
 
 .family-magic {
   margin: auto;
+}
+
+.navbar > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cont-navbar {
+  justify-self: flex-end;
 }
 
 .navbar-nav a {
@@ -294,8 +302,8 @@ button:focus {
   border-radius: 50%;
   position: absolute;
   justify-self: flex-end;
-  -webkit-transform: translate(1rem, -0.2rem);
-          transform: translate(1rem, -0.2rem);
+  -webkit-transform: translate(-0.5rem, -0.2rem);
+          transform: translate(-0.5rem, -0.2rem);
 }
 
 .navbar-brand {
@@ -379,36 +387,18 @@ button:focus {
   z-index: 101;
 }
 
-.hideNavBar {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0%;
-  -webkit-animation: hideMenu 0s linear 1s forwards;
-          animation: hideMenu 0s linear 1s forwards;
-  -webkit-transition: -webkit-clip-path 1s ease;
-  transition: -webkit-clip-path 1s ease;
-  transition: clip-path 1s ease;
-  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
-  -webkit-clip-path: circle(0% at top right);
-          clip-path: circle(0% at top right);
-  z-index: 100;
+.navbar-top-showed {
+  top: 0 !important;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.showNavBar {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0%;
-  -webkit-transition: -webkit-clip-path 1s ease;
-  transition: -webkit-clip-path 1s ease;
-  transition: clip-path 1s ease;
-  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
-  -webkit-clip-path: circle(200% at top right);
-          clip-path: circle(200% at top right);
-  z-index: 100;
+.navbar-top-hidden {
+  top: -50% !important;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .wave-circle {
@@ -559,6 +549,7 @@ button:focus {
 
 .ctrlProducts .cont-filter-menu select {
   background-color: transparent;
+  min-width: 210px;
   border: none;
   color: #1e3932cc;
   font-weight: bold;
@@ -570,7 +561,6 @@ button:focus {
   -webkit-appearance: none;
   /* Safari and Chrome */
   appearance: none;
-  background-image: url("../img//icons/arrow-select.png");
   background-repeat: no-repeat;
   background-position-x: 93%;
   background-position-y: 50%;
@@ -585,6 +575,12 @@ button:focus {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   background-color: #f5f5f5 !important;
+}
+
+.ctrlProducts .cont-filter-menu select + img {
+  margin-left: -2rem;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .card-product {
@@ -689,8 +685,8 @@ button:focus {
 }
 
 .fa-times {
-  -webkit-animation: flipTimes 0.2s ease;
-          animation: flipTimes 0.2s ease;
+  -webkit-animation: flipTimes 0.2s ease forwards;
+          animation: flipTimes 0.2s ease forwards;
 }
 
 #hearts-magic {
@@ -1319,7 +1315,46 @@ button:focus {
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 993px) {
+  .showNavBar {
+    width: 100%;
+    height: 150vh;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    -webkit-transition: -webkit-clip-path 1s ease;
+    transition: -webkit-clip-path 1s ease;
+    transition: clip-path 1s ease;
+    transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+    -webkit-clip-path: circle(200% at top right);
+            clip-path: circle(200% at top right);
+    z-index: 100;
+  }
+  .showNavBar ul a {
+    border-bottom: 1px solid #F2F0EB;
+  }
+  .showNavBar ul a a {
+    border-bottom: none;
+  }
+  .hideNavBar {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    -webkit-animation: hideMenu 0s linear 2s forwards;
+            animation: hideMenu 0s linear 2s forwards;
+    -webkit-transition: -webkit-clip-path 1s ease;
+    transition: -webkit-clip-path 1s ease;
+    transition: clip-path 1s ease;
+    transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+    -webkit-clip-path: circle(0% at top right);
+            clip-path: circle(0% at top right);
+    z-index: 100;
+  }
+  .hideNavBar ul {
+    width: 100%;
+  }
   .logo-starbucks {
     width: 32px;
   }
@@ -1343,18 +1378,6 @@ button:focus {
   .section-land p,
   .section-land-footer p {
     font-size: 16px;
-  }
-  .cont-text-land {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
   }
   .section-share {
     -webkit-transform: scale(1, -1);
@@ -1385,6 +1408,21 @@ button:focus {
   }
   .shoping-cart-icon svg {
     width: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cont-text-land {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
