@@ -15,7 +15,7 @@ let Menu = () => {
    
    let showCtrlProducts = (e) => {
       return (
-         <div className="ctrlProducts my-md-3 mt-3 mb-0  col-12 px-0">
+         <div className="ctrlProducts my-md-3 mt-3 mb-0 col-12 px-0">
             <div className="cont-backmenu col-12 col-lg-auto px-0">
                   <button onClick={(e) => setMenuShowed(true)} 
                   className="btn btn-primary rounded-pill pr-3 btnBackMenu text-white ">
@@ -24,7 +24,7 @@ let Menu = () => {
             </div>
             <div className="cont-filter-menu mt-4 mb-5 my-lg-0 col-12 col-lg-auto px-0">
 
-               <select className="pl-3 pr-5 col-12 col-lg-auto mb-2 mb-lg-auto rounded-pill bg-light">
+               <select className="pl-3 pr-5 col-12 col-lg-auto mb-2 mr-lg-3 mb-lg-auto rounded-pill bg-light">
                   <option value="Relevante" defaultChecked>Relevante</option>
                   <option value="upper">Mayor a menor precio</option>
                   <option value="lower">Menor a mayor precio</option>
