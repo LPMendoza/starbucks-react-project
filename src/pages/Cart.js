@@ -6,22 +6,28 @@ import FormSend from '../components/FormSend.js';
 import config from '../config.js';
 
 let Cart = () => {
-   
+   let subTotal = 0;
+   subTotal += config.cartItems.map((product) => parseFloat(product.quantity) * parseFloat(product.price)).reduce((a, b) => a + b);
+   console.log(subTotal)
+   let sendPrice = 10;
+   let total = subTotal + sendPrice;
    return (
       <React.Fragment>
          <NavBar pageActive={"cart"} />
          <section className="page bg-light-cream page-menu">
             <article className="section-land section-magic mb-0 bg-light pb-5 pt-3">
                <div className="container">
-                  <h4 className="text-dark text-center text-md-left">Carrito de compras</h4>
                   <div className="row justify-content-center mt-4">
-                     <div className="col-12 col-lg-8 cont-cart-items px-0 pb-5 mt-lg-5">
+
+                     <div className="col-12 col-lg-8 cont-cart-items px-0 pb-5 mt-lg-0">
+                        <h4 className="text-dark text-center text-md-left pl-md-3 mb-5">Carrito de compras</h4>
+
                      {
                            config.cartItems.map((cart, index) => <CartItem key={index} cartItem={cart} />)
                      }
                      </div>
                      <div className="col-12 col-lg-4 pr-md-0 cont-cart-items">
-                        <FormSend />
+                        <FormSend subTotal={subTotal} sendPrice={sendPrice} total={total} />
                      </div>
                   </div>
                </div>

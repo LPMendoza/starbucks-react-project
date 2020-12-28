@@ -409,8 +409,8 @@ button:focus {
   top: 0 !important;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 10px 20px rgba(10, 10, 10, 0.05);
+          box-shadow: 0px 10px 20px rgba(10, 10, 10, 0.05);
 }
 
 .navbar-top-hidden {
@@ -478,21 +478,16 @@ button:focus {
   background-size: 150%;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
-  -webkit-transition: 0.8s ease;
-  transition: 0.8s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   cursor: pointer;
-}
-
-.cont-cards-menu .cont-menu-img:hover {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
 }
 
 .cont-cards-menu .cont-menu-img:hover .imgMenuBackground {
   background-position: center 50%;
   background-size: 720px;
-  -webkit-transition: 0.8s ease;
-  transition: 0.8s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .cont-cards-menu .menu-item-name {
@@ -621,12 +616,10 @@ button:focus {
 }
 
 .card-product:hover {
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05) !important;
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05) !important;
+  -webkit-box-shadow: 0px 10px 20px rgba(10, 10, 10, 0.05) !important;
+          box-shadow: 0px 10px 20px rgba(10, 10, 10, 0.05) !important;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
 }
 
 .card-product:hover .circle-img {
@@ -725,12 +718,10 @@ button:focus {
 }
 
 .card-cart:hover {
-  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05) !important;
-          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05) !important;
+  -webkit-box-shadow: 0px 5px 20px rgba(10, 10, 10, 0.05) !important;
+          box-shadow: 0px 5px 20px rgba(10, 10, 10, 0.05) !important;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
 }
 
 .card-cart .cont-cart-product {
@@ -887,8 +878,8 @@ button:focus {
 }
 
 .form-send:hover {
-  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 10px 30px rgba(10, 10, 10, 0.05);
+          box-shadow: 0px 10px 30px rgba(10, 10, 10, 0.05);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -932,19 +923,32 @@ button:focus {
   outline: none;
 }
 
+.wave-contact {
+  margin-top: -10rem;
+}
+
+.wave-contact div {
+  padding-bottom: 10rem;
+}
+
+.cont-total {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 #point-contact-1 {
-  -webkit-animation: pointContact 1s linear infinite;
-          animation: pointContact 1s linear infinite;
+  -webkit-animation: pointContact 1s ease infinite;
+          animation: pointContact 1s ease infinite;
 }
 
 #point-contact-2 {
-  -webkit-animation: pointContact 1s linear infinite;
-          animation: pointContact 1s linear infinite;
+  -webkit-animation: pointContact 1s ease .25s infinite;
+          animation: pointContact 1s ease .25s infinite;
 }
 
 #point-contact-3 {
-  -webkit-animation: pointContact 1s linear infinite;
-          animation: pointContact 1s linear infinite;
+  -webkit-animation: pointContact 1s ease 0.5s infinite;
+          animation: pointContact 1s ease 0.5s infinite;
 }
 
 #hearts-magic {
@@ -1011,11 +1015,17 @@ button:focus {
 @-webkit-keyframes pointContact {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   50% {
     opacity: 1;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
   }
   100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 0;
   }
 }
@@ -1023,11 +1033,17 @@ button:focus {
 @keyframes pointContact {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   50% {
     opacity: 1;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
   }
   100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 0;
   }
 }

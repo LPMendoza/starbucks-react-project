@@ -395,7 +395,7 @@ button:focus {
 .navbar-top-showed {
    top: 0 !important;
    transition: 0.4s ease;
-   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+   box-shadow: 0px 10px 20px rgba(10, 10, 10, 0.05);
 
 }
 
@@ -449,7 +449,7 @@ button:focus {
          background-position: center;
          background-size: 150%;
          filter: brightness(80%);
-         transition: 0.8s ease;
+         transition: 0.4s ease;
          cursor: pointer;
       }
    }
@@ -458,9 +458,8 @@ button:focus {
       .imgMenuBackground {
          background-position: center 50%;
          background-size: 720px;
-         transition: 0.8s ease;
+         transition: 0.4s ease;
       }
-         transform: translateY(-.5rem);
 
    }
 
@@ -570,9 +569,8 @@ button:focus {
    animation: showProduct .4s ease;
 
    &:hover {
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05) !important;
+      box-shadow: 0px 10px 20px rgba(10, 10, 10, 0.05) !important;
       transition: 0.2s ease;
-      transform: translateY(-.5rem);
 
       .circle-img {
          background-color: $greenDarkAccent;
@@ -650,9 +648,8 @@ button:focus {
       flex-wrap: wrap;
    }
    &:hover {
-      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05) !important;
+      box-shadow: 0px 5px 20px rgba(10, 10, 10, 0.05) !important;
       transition: 0.2s ease;
-      transform: translateY(-.5rem);
    }
 
    .cont-cart-product {
@@ -770,7 +767,7 @@ button:focus {
    transition: 0.2s ease;
 
    &:hover {
-      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 10px 30px rgba(10, 10, 10, 0.05);
       transition: 0.2s ease
 ;
    }
@@ -810,14 +807,27 @@ button:focus {
 
 }
 
+.wave-contact {
+   margin-top: -10rem;
+
+   div {
+      padding-bottom: 10rem;
+   }
+}
+
+.cont-total {
+   font-size: 24px;
+   font-weight: bold;
+}
+
 #point-contact-1 {
-   animation: pointContact 1s linear infinite;
+   animation: pointContact 1s ease infinite;
 }
 #point-contact-2 {
-   animation: pointContact 1s linear infinite;
+   animation: pointContact 1s ease .25s infinite;
 }
 #point-contact-3 {
-   animation: pointContact 1s linear infinite;
+   animation: pointContact 1s ease 0.5s infinite;
 }
 
 #hearts-magic {
@@ -872,11 +882,14 @@ button:focus {
 @keyframes pointContact {
    0% {
       opacity: 0;
+      transform: translateY(0px);
    }
    50% {
       opacity: 1;
+      transform: translateY(-4px);
    }
    100% {
+      transform: translateY(0px);
       opacity: 0;
    }
 }

@@ -7,15 +7,15 @@ let Contact = () => {
    return (
       <React.Fragment>
          <NavBar pageActive={"cart"} />
-         <section className="page bg-light-cream page-menu">
-            <article className="section-land bg-light section-magic mb-0 pb-5 pt-3">
+         <section className="page bg-light page-menu">
+            <article className="section-land bg-light section-magic mb-5 pb-5 pt-3">
                <div className="container">
                   <h4 className="text-dark text-center text-md-left">Contáctanos y dejanos tus comentarios</h4>
-                  <div className="row justify-content-between align-items-center mt-5">
+                  <div className="row justify-content-lg-between align-items-center mt-5">
                      <div className="col-12 col-lg-4 pr-md-0 cont-cart-items">
                         <FormContact />
                      </div>
-                     <div className="col-12 col-md-6 mt-4 mt-md-0">
+                     <div className="col-12 col-md-6 mt-5 mt-lg-0">
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="img-fluid"
@@ -1087,11 +1087,14 @@ let Contact = () => {
                   </div>
                </div>
             </article>
-            {/* <article className="bg-primary pb-3 wave-div-contact ">
-              <svg className="img-fluid wave-light" viewBox="0 0 1326 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1329 0H-2V50.2724C4.35961 50.2724 108.456 15.5883 205.357 15.5883C398.822 15.5883 416.73 79.5005 478.988 79.5005C541.245 79.5005 645.174 38.1914 768.685 38.1914C892.195 38.1914 882.154 66.2504 997.631 79.5005C1090.01 90.1005 1257.04 64.4318 1329 50.2724V0Z" fill="#F9F9F9" />
-              </svg>
-            </article> */}
+
+         {/* <div className="wave-contact">
+           <svg className="img-fluid" viewBox="0 0 1328 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path className="fill-gray-cream" fill-rule="evenodd" clip-rule="evenodd" d="M664 0C901.192 0 1126.16 36.5404 1328 102L1328 118H0V102C201.837 36.5404 426.808 0 664 0Z" />
+           </svg>
+            <div className="bg-light-cream"></div>
+         </div> */}
+
          </section>
       </React.Fragment>
    )

@@ -86,6 +86,12 @@ let config = {
     imgProduct: imgSpice,
     price: 98.42,
     quantity: 3,
+  }, {
+    productName: "Double Chocolaty Chip",
+    category: "Frappuccino",
+    imgProduct: imgChip,
+    quantity: 2,
+    price: 46.72
   }, ]
 }
 export default config;
