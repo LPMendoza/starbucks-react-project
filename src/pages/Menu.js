@@ -75,7 +75,7 @@ let Menu = () => {
             {/* <svg className="img-fluid wave-circle" viewBox="0 0 1328 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path className="fill-gray-cream" fillRule="evenodd" clipRule="evenodd" d="M664 0C901.192 0 1126.16 36.5404 1328 102L1328 118H0V102C201.836 36.5404 426.808 0 664 0Z"/>
             </svg> */}
-            <article className="bg-light-cream article-menu py-0 py-md-4">
+            <article className="bg-light-cream article-menu pt-md-4 pb-5">
                <div className="container">
                   <div className="row align-items-center justify-content-center">
                      <div className="cont-cards-menu col-12 px-0 d-flex flex-wrap">
@@ -84,6 +84,12 @@ let Menu = () => {
                   </div>
                </div>
             </article>
+            
+            {/* <article className="bg-primary pb-3 wave-div-contact mt-5">
+              <svg className="img-fluid wave-light" viewBox="0 0 1326 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1329 0H-2V50.2724C4.35961 50.2724 108.456 15.5883 205.357 15.5883C398.822 15.5883 416.73 79.5005 478.988 79.5005C541.245 79.5005 645.174 38.1914 768.685 38.1914C892.195 38.1914 882.154 66.2504 997.631 79.5005C1090.01 90.1005 1257.04 64.4318 1329 50.2724V0Z" className="fill-gray-cream" />
+              </svg>
+            </article> */}
          </section>
       </React.Fragment>
    )

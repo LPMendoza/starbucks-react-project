@@ -75,6 +75,20 @@ button:focus {
   background-color: #F2F0EB !important;
 }
 
+.btn-primary {
+  background-color: #018a57 !important;
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  border: none;
+  background-color: #006241 !important;
+}
+
+.btn-primary:active {
+  background-color: #005f3c !important;
+}
+
 .btn-light {
   background-color: #f9f9f9 !important;
   border: none;
@@ -82,7 +96,11 @@ button:focus {
 
 .btn-light:hover, .btn-light:focus {
   border: none;
-  background-color: #f5f5f5 !important;
+  background-color: #F2F0EB !important;
+}
+
+.btn-light:active {
+  background-color: #d1d1d0 !important;
 }
 
 .fill-primary {
@@ -95,16 +113,6 @@ button:focus {
 
 .fill-gray {
   fill: #f9f9f9;
-}
-
-.btn-primary {
-  background-color: #018a57 !important;
-  border: none;
-}
-
-.btn-primary:hover, .btn-primary:focus {
-  border: none;
-  background-color: #016641 !important;
 }
 
 .text-dark {
@@ -248,7 +256,7 @@ button:focus {
 }
 
 .navbar-nav a > li > a {
-  font-family: "Futura-bold" !important;
+  font-family: "Futura-Bold" !important;
   font-size: 16px !important;
   color: #1e3932cc !important;
   -webkit-transition: 0.2s ease;
@@ -387,6 +395,16 @@ button:focus {
   z-index: 101;
 }
 
+.btnMenu .fa-bars {
+  -webkit-animation: flipBars 0.2s ease forwards;
+          animation: flipBars 0.2s ease forwards;
+}
+
+.btnMenu .fa-times {
+  -webkit-animation: flipTimes 0.2s ease forwards;
+          animation: flipTimes 0.2s ease forwards;
+}
+
 .navbar-top-showed {
   top: 0 !important;
   -webkit-transition: 0.4s ease;
@@ -485,7 +503,6 @@ button:focus {
 
 .btnBackMenu {
   height: 40px;
-  font-weight: bold;
 }
 
 .btnBackMenu:focus {
@@ -536,7 +553,6 @@ button:focus {
   background-color: transparent;
   border: none;
   color: #1e3932cc;
-  font-weight: bold;
 }
 
 .ctrlProducts .cont-filter-menu .cont-search input:focus {
@@ -552,7 +568,6 @@ button:focus {
   min-width: 210px;
   border: none;
   color: #1e3932cc;
-  font-weight: bold;
   height: 40px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -606,8 +621,8 @@ button:focus {
 }
 
 .card-product:hover {
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1) !important;
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1) !important;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05) !important;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05) !important;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   -webkit-transform: translateY(-0.5rem);
@@ -679,14 +694,257 @@ button:focus {
   width: 32px;
 }
 
-.fa-bars {
-  -webkit-animation: flipBars 0.2s ease forwards;
-          animation: flipBars 0.2s ease forwards;
+.card-cart {
+  background: #fff;
+  margin: 1rem;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-animation: showcart .4s ease;
+          animation: showcart .4s ease;
 }
 
-.fa-times {
-  -webkit-animation: flipTimes 0.2s ease forwards;
-          animation: flipTimes 0.2s ease forwards;
+.card-cart .cont-image-cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-cart:hover {
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05) !important;
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05) !important;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.card-cart .cont-cart-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-cart .cont-data-cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.card-cart .cart-name-card {
+  font-size: 16px;
+  color: #00754A;
+  font-family: "Myriad-Regular";
+  font-weight: bold;
+}
+
+.card-cart .cart-categorie-card {
+  font-size: 16px;
+  color: #1e3932cc;
+}
+
+.card-cart .cont-footer-cart-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-cart .cart-price-card {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Myriad-Regular";
+  color: #1e3932cc;
+}
+
+.card-cart .image-cart-card {
+  width: 74px;
+  justify-self: flex-start;
+  z-index: 1;
+}
+
+.card-cart .btn-delete-cart {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 14px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-cart .cont-ctrl-quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-cart .btn-plus-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32px;
+  color: #1e3932cc;
+  border-radius: 30px 0px 0px 30px;
+  font-size: 14px;
+}
+
+.card-cart .btn-less-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32px;
+  color: #1e3932cc;
+  border-radius: 0px 30px 30px 0px;
+  font-size: 14px;
+}
+
+.card-cart .lbl-quantity {
+  width: 80px;
+  font-size: 14px;
+  color: #1e3932cc;
+  text-align: center;
+}
+
+.card-cart .cart-quantity-price-card {
+  font-size: 16px;
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
+  font-family: "Myriad-Regular";
+  color: #1e3932cc;
+}
+
+.card-cart .btn-delete-cart:focus {
+  border: none;
+}
+
+.card-cart .cart-plus {
+  width: 32px;
+}
+
+.form-send {
+  border-radius: 30px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.form-send:hover {
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.form-send button {
+  height: 40px;
+  border-radius: 20px;
+}
+
+.cont-input-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cont-input-form .lbl-form {
+  font-weight: bold;
+  color: #1e3932cc;
+}
+
+.cont-input-form .lbl-form span {
+  font-weight: bold;
+  color: #AC0000;
+}
+
+.cont-input-form .input-custom {
+  border: none;
+  background-color: #f9f9f9;
+  height: 40px;
+  padding: 1rem;
+  border-radius: 30px;
+  color: #1e3932cc;
+  overflow-y: hidden;
+}
+
+.cont-input-form .input-custom:focus {
+  outline: none;
+}
+
+#point-contact-1 {
+  -webkit-animation: pointContact 1s linear infinite;
+          animation: pointContact 1s linear infinite;
+}
+
+#point-contact-2 {
+  -webkit-animation: pointContact 1s linear infinite;
+          animation: pointContact 1s linear infinite;
+}
+
+#point-contact-3 {
+  -webkit-animation: pointContact 1s linear infinite;
+          animation: pointContact 1s linear infinite;
 }
 
 #hearts-magic {
@@ -748,6 +1006,30 @@ button:focus {
 #star-tree-relax {
   -webkit-animation: starLightTreeRelax 3s ease infinite !important;
           animation: starLightTreeRelax 3s ease infinite !important;
+}
+
+@-webkit-keyframes pointContact {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pointContact {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes flipBars {
@@ -1412,6 +1694,21 @@ button:focus {
 }
 
 @media screen and (max-width: 767px) {
+  .card-cart {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .image-cart-card {
+    width: 128px !important;
+    justify-self: flex-start;
+    z-index: 1;
+  }
   .cont-text-land {
     display: -webkit-box;
     display: -ms-flexbox;

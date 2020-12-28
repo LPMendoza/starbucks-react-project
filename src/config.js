@@ -13,56 +13,79 @@ import imgSpice from "./assets/img/products/drinks/pumpkin-spice.png";
 import imgStrawberry from "./assets/img/products/drinks/strawberry.png";
 
 let config = {
-   basePath: "/starbucks-page",
-   menuItems: [{
-      menuName: "Bebidas",
-      imgMenu: imgDrinks
-   }, {
-      menuName: "Desayunos",
-      imgMenu: imgLunch
-   }, {
-      menuName: "Panaderia",
-      imgMenu: imgBakery
-   }, {
-      menuName: "Snacks & Sweets",
-      imgMenu: imgSnacks
-   }, {
-      menuName: "Yogurt & Custard",
-      imgMenu: imgYogurt
-   }, {
-      menuName: "Whole Bean",
-      imgMenu: imgWhole
-   }],
-   productItems: [{
+  basePath: "/starbucks-page",
+  menuItems: [{
+    menuName: "Bebidas",
+    imgMenu: imgDrinks
+  }, {
+    menuName: "Desayunos",
+    imgMenu: imgLunch
+  }, {
+    menuName: "Panaderia",
+    imgMenu: imgBakery
+  }, {
+    menuName: "Snacks & Sweets",
+    imgMenu: imgSnacks
+  }, {
+    menuName: "Yogurt & Custard",
+    imgMenu: imgYogurt
+  }, {
+    menuName: "Whole Bean",
+    imgMenu: imgWhole
+  }],
+  productItems: [{
       productName: "Salted Caramel Mocha",
       category: "Frappuccino",
       imgProduct: imgCaramel,
       price: 84.50
-   }, {
-      productName: "Double Chocolaty Chip",
-      category: "Frappuccino",
-      imgProduct: imgChip,
-      price: 46.72
-   }, {
-      productName: "Matacha Green Tea Crème",
-      category: "Iced Teas",
-      imgProduct: imgGreen,
-      price: 64.62
-   }, {
-      productName: "Pumpkin Cream Cold",
-      category: "Cold Coffees",
-      imgProduct: imgCold,
-      price: 98.42
-   }, {
+    },
+    {
       productName: "Pumpkin Spice Coffee",
       category: "Frappuccino",
       imgProduct: imgSpice,
       price: 98.42
-   }, {
+    }, {
       productName: "Strawberry Frappuccino",
       category: "Frappuccino",
       imgProduct: imgStrawberry,
       price: 78.53
-   }]
+    }, {
+      productName: "Pumpkin Cream Cold",
+      category: "Cold Coffees",
+      imgProduct: imgCold,
+      price: 98.42
+    },
+    {
+      productName: "Double Chocolaty Chip",
+      category: "Frappuccino",
+      imgProduct: imgChip,
+      price: 46.72
+    },
+    {
+      productName: "Matacha Green Tea Crème",
+      category: "Iced Teas",
+      imgProduct: imgGreen,
+      price: 64.62
+    }
+  ],
+  cartItems: [{
+    productName: "Salted Caramel Mocha",
+    category: "Frappuccino",
+    imgProduct: imgCaramel,
+    price: 84.50,
+    quantity: 2,
+  }, {
+    productName: "Strawberry Frappuccino",
+    category: "Frappuccino",
+    imgProduct: imgStrawberry,
+    price: 78.53,
+    quantity: 1,
+  }, {
+    productName: "Pumpkin Spice Coffee",
+    category: "Frappuccino",
+    imgProduct: imgSpice,
+    price: 98.42,
+    quantity: 3,
+  }, ]
 }
 export default config;
