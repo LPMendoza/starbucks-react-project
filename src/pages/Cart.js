@@ -17,16 +17,16 @@ let Cart = () => {
          <section className="page bg-light-cream page-menu">
             <article className="section-land section-magic mb-0 bg-light pb-5 pt-3">
                <div className="container">
-                  <div className="row justify-content-center mt-4">
+                  <div className="row justify-content-center my-4">
 
-                     <div className="col-12 col-lg-8 cont-cart-items px-0 pb-5 mt-lg-0">
+                     <div className="col-12 col-lg-8 cont-cart-items px-0 pb-3 pb-lg-5 mt-lg-0">
                         <h4 className="text-dark text-center text-md-left pl-md-3 mb-5">Carrito de compras</h4>
 
                      {
                            config.cartItems.map((cart, index) => <CartItem key={index} cartItem={cart} />)
                      }
                      </div>
-                     <div className="col-12 col-lg-4 pr-md-0 cont-cart-items">
+                     <div className="col-12 col-lg-4 pr-md-0">
                         <FormSend subTotal={subTotal} sendPrice={sendPrice} total={total} />
                      </div>
                   </div>

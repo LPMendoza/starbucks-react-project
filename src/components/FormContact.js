@@ -17,7 +17,7 @@ let FormContact = () => {
          </div>
          <div className="cont-input-form mb-4">
             <label className="lbl-form"> Mensaje <span>*</span></label>
-            <textarea onInput={handelOnInputArea} type="text" className="input-custom" />
+            <textarea onInput={handelOnInputArea} type="text" className="input-custom textarea-custom" />
          </div>
          <div className="cont-input-form mb-4">
             <label className="lbl-form"> Teléfono </label>

@@ -3,7 +3,7 @@ import React from 'react';
 let ProductCard = ({productItem}) => {
    return (
       <div className="col-12 col-md-5 col-lg-3 px-0 mb-3 cont-card-product">
-         <div className="card-product bg-white px-4 py-2 mt-0">
+         <div className="card-product px-4 py-2 mt-0">
             <div className="circle-img"></div>
             <img className="image-product-card mt-2" src={productItem.imgProduct} />
             <div>

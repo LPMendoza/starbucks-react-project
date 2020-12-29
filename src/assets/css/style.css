@@ -185,6 +185,10 @@ button:focus {
   background-position: center;
 }
 
+.section-land-footer a {
+  width: 100%;
+}
+
 .section-land-footer h1 {
   color: #fff;
   letter-spacing: 0.1rem;
@@ -923,6 +927,10 @@ button:focus {
   outline: none;
 }
 
+.cont-input-form .textarea-custom {
+  height: 55px;
+}
+
 .wave-contact {
   margin-top: -10rem;
 }
@@ -932,7 +940,7 @@ button:focus {
 }
 
 .cont-total {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
 }
 

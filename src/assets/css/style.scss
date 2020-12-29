@@ -200,6 +200,9 @@ button:focus {
    background-size: 100%;
    background-position: center;
 
+   a {
+      width: 100%;
+   }
    h1 {
       color: $white;
       letter-spacing: 0.1rem;
@@ -804,7 +807,9 @@ button:focus {
       }
    }
 
-
+   .textarea-custom {
+      height: 55px;
+   }
 }
 
 .wave-contact {
@@ -816,7 +821,7 @@ button:focus {
 }
 
 .cont-total {
-   font-size: 24px;
+   font-size: 18px;
    font-weight: bold;
 }
 
