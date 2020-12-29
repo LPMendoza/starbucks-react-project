@@ -9,6 +9,7 @@ let NavBar = ({pageActive}) => {
    const [showMenu, setShowMenu] = useState(false);
    const [stickyMenu, setStickyMenu] = useState(false);
    let lastScroll = 0;
+
    window.onscroll = () => {
       if(window.scrollY < 10) {
          setStickyMenu(false);
@@ -31,6 +32,20 @@ let NavBar = ({pageActive}) => {
    const handleOnClick = (e) => {
       window.scrollTo(0, 0);
       document.body.style.overflow = 'auto';
+      document.body.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = 'auto';
+   }
+
+   const showMenuClick = (e) => {
+      setShowMenu(showMenu ? false : true);
+      if(!showMenu) {
+         document.body.style.overflowY = 'hidden';
+         document.documentElement.style.overflowY = 'hidden';
+      }  
+      else {
+         document.body.style.overflowY = 'auto';
+         document.documentElement.style.overflowY = 'auto';
+      }
    }
 
    return (
@@ -73,14 +88,7 @@ let NavBar = ({pageActive}) => {
                      </a>
                   </Link>
                   <button 
-                  onClick={(e) => {
-                     setShowMenu(showMenu ? false : true);
-                     showMenu ?
-                     document.body.style.overflow = 'auto'
-                     : 
-                     document.body.style.overflow = 'hidden'
-
-                  }} 
+                  onClick={showMenuClick} 
                   className={`btn btn-light btnMenu ml-4 d-flex d-lg-none`}>
                      <span className={`${showMenu ? "fas fa-times" : "fas fa-bars"}`}></span>
                   </button>

@@ -26,7 +26,7 @@ let FormSend = ({subTotal, sendPrice, total}) => {
             <label>${subTotal.toFixed(2)}</label>
          </div>
          <div className="cont-sendPrice d-flex justify-content-between">
-            <label>Envio</label>
+            <label>Envío</label>
             <label>${sendPrice.toFixed(2)}</label>
          </div>
          <div className="cont-total d-flex justify-content-between">

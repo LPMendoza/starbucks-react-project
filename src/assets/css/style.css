@@ -1203,6 +1203,8 @@ button:focus {
 @-webkit-keyframes hideMenuItems {
   from {
     opacity: 1;
+    width: 0px;
+    height: 0px;
     margin-left: 0%;
   }
   to {
@@ -1214,6 +1216,8 @@ button:focus {
 @keyframes hideMenuItems {
   from {
     opacity: 1;
+    width: 0px;
+    height: 0px;
     margin-left: 0%;
   }
   to {
@@ -1760,6 +1764,9 @@ button:focus {
 }
 
 @media screen and (max-width: 993px) {
+  body {
+    overflow-y: hidden !important;
+  }
   .cont-menus-card {
     height: 0px !important;
     -webkit-animation: hideMenuItems 0.4s ease forwards;
