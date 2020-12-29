@@ -31,21 +31,20 @@ let NavBar = ({pageActive}) => {
 
    const handleOnClick = (e) => {
       window.scrollTo(0, 0);
-      document.body.style.overflow = 'auto';
-      document.body.style.overflowY = 'auto';
-      document.documentElement.style.overflowY = 'auto';
+      document.body.style.overflow = 'unset';
+      document.documentElement.style.overflowY = 'unset';
    }
 
    const showMenuClick = (e) => {
       setShowMenu(showMenu ? false : true);
-      if(!showMenu) {
-         document.body.style.overflowY = 'hidden';
-         document.documentElement.style.overflowY = 'hidden';
-      }  
-      else {
-         document.body.style.overflowY = 'auto';
-         document.documentElement.style.overflowY = 'auto';
-      }
+   }
+
+   const showNavbar = () => {
+      return "showNavBar";
+   }
+
+   const hideNavBar = () => {
+      return "hideNavBar"
    }
 
    return (
@@ -60,7 +59,12 @@ let NavBar = ({pageActive}) => {
                </Link>
                
                <div className="cont-cart-menu">
-                  <div className={`d-flex flex-row cont-navbar bg-light ${showMenu ? " showNavBar d-flex flex-column align-content-center" : "hideNavBar"}`} id="navbarNav">
+                  <div className={`d-flex flex-row flex-column align-content-center cont-navbar bg-light ${showMenu ? showNavbar() : hideNavBar()}`} id="navbarNav">
+                     <button 
+                     onClick={showMenuClick} 
+                     className={`btn btn-light btnMenuClose ml-auto d-flex d-lg-none`}>
+                        <span className={`${showMenu ? "fas fa-times" : "fas fa-bars"}`}></span>
+                     </button>
                      <ul className={` mobile-ul navbar-nav mr-lg-5 mt-5 mt-lg-0`}>
                         <Link style={{ textDecoration: 'none' }} to={`${config.basePath}/`} className="nav-item" style={{ color: 'inherit', textDecoration: 'inherit' }}>
                            <li onClick={handleOnClick} className={`nav-item mr-lg-5 py-3 py-lg-0 ${activeItem === "home" ? "active" : ""} col-12 col-lg-auto`}>

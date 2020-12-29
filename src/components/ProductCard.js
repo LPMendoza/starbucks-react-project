@@ -4,7 +4,6 @@ let ProductCard = ({productItem}) => {
    return (
       <div className="col-12 col-md-5 col-lg-3 px-0 mb-3 cont-card-product">
          <div className="card-product px-4 py-2 mt-0">
-            <div className="circle-img"></div>
             <img className="image-product-card mt-2" src={productItem.imgProduct} />
             <div>
                <p className="product-name-card mt-4 mb-2  col-12 px-0">{productItem.productName}</p>
