@@ -78,7 +78,7 @@ let NavBar = ({pageActive}) => {
                      showMenu ?
                      document.body.style.overflow = 'auto'
                      : 
-                    document.body.style.overflow = 'hidden'
+                     document.body.style.overflow = 'hidden'
 
                   }} 
                   className={`btn btn-light btnMenu ml-4 d-flex d-lg-none`}>

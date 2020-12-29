@@ -14,33 +14,6 @@ let Menu = () => {
 
    let showMenu = (e) => config.menuItems.map((menu, index) => <MenuCard key={index} handleOnClick={setMenuShowed} menuItem={menu} />)
    
-   let showCtrlProducts = (e) => {
-      return (
-         <div className="ctrlProducts mt-md-4 mb-md-3 mb-0 col-12 px-0">
-            <div className="cont-backmenu col-12 col-md-auto px-0">
-                  <button onClick={(e) => setMenuShowed(true)} 
-                  className="btn btn-primary rounded-pill pr-3 btnBackMenu text-white col-12 col-md-auto">
-                     <span className="fas fa-arrow-left pr-3"></span>Regresar al menú
-                  </button>
-            </div>
-            <div className="cont-filter-menu mt-4 mb-5 my-md-0 col-12 col-md-auto px-0">
-
-               <div className="cont-select  col-12 col-md-auto mb-2 mr-md-3 mb-md-auto px-0">
-                  <select className="rounded-pill bg-light pl-3 pr-5 col-12">
-                     <option value="relevancia" defaultChecked>Relevancia</option>
-                     <option value="upper">Mayor a menor precio</option>
-                     <option value="lower">Menor a mayor precio</option>
-                  </select>
-                  <img src={arrowSelect} />
-               </div>
-               <div className="cont-search px-2 col-12 col-md-auto rounded-pill bg-light">
-                  <input type="text" className="ml-2" placeholder="Buscar..." required/>
-                  <span class="fas fa-search mx-2"></span>
-               </div>
-            </div>
-         </div>
-      )
-   }
    return (
       <React.Fragment>
          <NavBar pageActive={"menu"} />
@@ -63,12 +36,11 @@ let Menu = () => {
             <svg className="img-fluid wave-light" viewBox="0 0 1326 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M1329 0H-2V50.2724C4.35961 50.2724 108.456 15.5883 205.357 15.5883C398.822 15.5883 416.73 79.5005 478.988 79.5005C541.245 79.5005 645.174 38.1914 768.685 38.1914C892.195 38.1914 882.154 66.2504 997.631 79.5005C1090.01 90.1005 1257.04 64.4318 1329 50.2724V0Z" fill="#F9F9F9" />
             </svg>
-            <div className="container">
-               <div className="row align-items-center justify-content-beetween px-3">
+            <div className="container" id="cont-menu-products">
+               <div className="row align-items-center justify-content-beetween px-3" >
                   <h3 className="col-12 text-center mt-5 mb-lg-5 mb-4">
-                     {menuShowed ? "SELECCIONA UNA CATEGORIA PARA VER SUS PRODUCTOS" : "BEBIDAS DE CALIDAD PARA TI"}
+                     {menuShowed ? "SELECCIONA UNA CATEGORIA" : "BEBIDAS DE CALIDAD PARA TI"}
                   </h3>
-                  {!menuShowed ? showCtrlProducts() : ""}
 
                </div>
             </div>
@@ -77,9 +49,45 @@ let Menu = () => {
             </svg> */}
             <article className="bg-light-cream article-menu pt-md-4 pb-5">
                <div className="container">
-                  <div className="row align-items-center justify-content-center">
-                     <div className="cont-cards-menu col-12 px-0 d-flex flex-wrap">
-                        {menuShowed ? showMenu() : showProduct()}
+                  <div className="row">
+                     <div className="cont-cards-menu col-12 px-0 d-flex align-items-start" >
+                        <div className={`col-12 px-0  ${menuShowed ? "showMenuItems" : "cont-menus-card"}`}>
+                        {
+                           showMenu()
+                        }
+                        </div>
+                        <div className={`col-12 px-0  ${!menuShowed ? "showProducts" : "cont-products-card"}`}>
+                           <div className="ctrlProducts mt-md-0 mb-md-5 mb-0 col-12">
+                              <div className="cont-backmenu col-12 col-md-auto px-0">
+                                 <button onClick={(e) => {
+                                    setMenuShowed(true);
+                                    document.getElementById("cont-menu-products").scrollIntoView();
+                                 }
+                                 }
+                                    className="btn btn-primary rounded-pill pr-3 btnBackMenu text-white col-12 col-md-auto">
+                                    <span className="fas fa-arrow-left pr-3"></span>Regresar al menú
+                                  </button>
+                              </div>
+                              <div className="cont-filter-menu mt-4 mb-5 my-md-0 col-12 col-md-auto px-0">
+
+                                 <div className="cont-select  col-12 col-md-auto mb-2 mr-md-3 mb-md-auto px-0">
+                                    <select className="rounded-pill bg-light pl-3 pr-5 col-12">
+                                       <option value="relevancia" defaultChecked>Relevancia</option>
+                                       <option value="upper">Mayor a menor precio</option>
+                                       <option value="lower">Menor a mayor precio</option>
+                                    </select>
+                                    <img src={arrowSelect} />
+                                 </div>
+                                 <div className="cont-search px-2 col-12 col-md-auto rounded-pill bg-light">
+                                    <input type="text" className="ml-2" placeholder="Buscar..." required />
+                                    <span className="fas fa-search mx-2"></span>
+                                 </div>
+                              </div>
+                           </div>
+                           {
+                              showProduct()
+                           }
+                        </div>
                      </div>
                   </div>
                </div>

@@ -33,8 +33,11 @@ body::-webkit-scrollbar-thumb:hover {
 body {
   background-color: #f9f9f9;
   font-family: "Myriad-Regular", "Open Sans";
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+}
+
+html, body {
+  overflow-x: hidden !important;
 }
 
 h1,
@@ -440,16 +443,15 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .cont-cards-menu .card-menu {
-  -webkit-animation: showProduct 0.4s ease;
-          animation: showProduct 0.4s ease;
+  -webkit-animation: showMenuItems 0.4s ease;
+          animation: showMenuItems 0.4s ease;
+  height: 320px !important;
 }
 
 .cont-cards-menu .cont-menu-img {
@@ -524,6 +526,9 @@ button:focus {
   font-size: 16px !important;
   font-family: "Myriad-Regular";
   color: #1e3932cc;
+  opacity: 0;
+  -webkit-animation: ctrlProducts 0.2s ease 0.5s forwards;
+          animation: ctrlProducts 0.2s ease 0.5s forwards;
 }
 
 .ctrlProducts label {
@@ -597,6 +602,24 @@ button:focus {
   pointer-events: none;
 }
 
+@-webkit-keyframes ctrlProducts {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ctrlProducts {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .card-product {
   background: #fff;
   min-width: 256px;
@@ -615,8 +638,6 @@ button:focus {
   position: relative;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-animation: showProduct .4s ease;
-          animation: showProduct .4s ease;
 }
 
 .card-product:hover {
@@ -944,6 +965,65 @@ button:focus {
   font-weight: bold;
 }
 
+.cont-menus-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-animation: hideMenuItems 0.4s ease forwards;
+          animation: hideMenuItems 0.4s ease forwards;
+}
+
+.cont-products-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-animation: hideProducts 0.4s ease forwards;
+          animation: hideProducts 0.4s ease forwards;
+}
+
+.showMenuItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: showMenuItems 0.4s ease forwards;
+          animation: showMenuItems 0.4s ease forwards;
+}
+
+.showProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: showProducts 0.4s ease forwards;
+          animation: showProducts 0.4s ease forwards;
+}
+
+.hideProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-animation: hideProducts 0.4s ease forwards;
+          animation: hideProducts 0.4s ease forwards;
+}
+
 #point-contact-1 {
   -webkit-animation: pointContact 1s ease infinite;
           animation: pointContact 1s ease infinite;
@@ -1102,21 +1182,87 @@ button:focus {
   }
 }
 
-@-webkit-keyframes showProduct {
+@-webkit-keyframes showMenuItems {
   from {
-    opacity: 0;
+    margin-left: -50%;
   }
   to {
-    opacity: 1;
+    margin-left: 0%;
   }
 }
 
-@keyframes showProduct {
+@keyframes showMenuItems {
+  from {
+    margin-left: -50%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@-webkit-keyframes hideMenuItems {
+  from {
+    opacity: 1;
+    margin-left: 0%;
+  }
+  to {
+    opacity: 0;
+    margin-left: -100%;
+  }
+}
+
+@keyframes hideMenuItems {
+  from {
+    opacity: 1;
+    margin-left: 0%;
+  }
+  to {
+    opacity: 0;
+    margin-left: -100%;
+  }
+}
+
+@-webkit-keyframes showProducts {
   from {
     opacity: 0;
+    margin-right: -100%;
   }
   to {
     opacity: 1;
+    margin-left: 0%;
+  }
+}
+
+@keyframes showProducts {
+  from {
+    opacity: 0;
+    margin-right: -100%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0%;
+  }
+}
+
+@-webkit-keyframes hideProducts {
+  from {
+    opacity: 1;
+    margin-right: 0%;
+  }
+  to {
+    opacity: 0;
+    margin-right: -100%;
+  }
+}
+
+@keyframes hideProducts {
+  from {
+    opacity: 1;
+    margin-right: 0%;
+  }
+  to {
+    opacity: 0;
+    margin-right: -100%;
   }
 }
 
@@ -1609,11 +1755,19 @@ button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0rem 1rem;
+    margin: 0rem 0rem;
   }
 }
 
 @media screen and (max-width: 993px) {
+  .cont-menus-card {
+    height: 0px !important;
+    -webkit-animation: hideMenuItems 0.4s ease forwards;
+            animation: hideMenuItems 0.4s ease forwards;
+  }
+  .cont-products-card {
+    height: 0px !important;
+  }
   .showNavBar {
     width: 100%;
     height: 100vh;

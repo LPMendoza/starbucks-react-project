@@ -3,7 +3,7 @@ import Logo from "../assets/img/logo-starbucks.svg";
 let Footer = () => {
    return(
       <div className="container py-5">
-         <div className="row d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+         <div className="row d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-md-between">
             <div className="px-0 d-flex flex-column align-items-center align-items-md-start justify-content-center">
                <a className="navbar-brand text-white mb-4">
                   <img className="mr-4" src={Logo} width="64px"></img>
