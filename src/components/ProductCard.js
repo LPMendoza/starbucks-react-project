@@ -7,7 +7,7 @@ let ProductCard = ({productItem}) => {
             <div className="circle-img"></div>
             <img className="image-product-card mt-2" src={productItem.imgProduct} />
             <div>
-               <p className="product-name-card mt-4 mb-2  col-10 px-0">{productItem.productName}</p>
+               <p className="product-name-card mt-4 mb-2  col-12 px-0">{productItem.productName}</p>
                <span className=" product-categorie-card">{productItem.category}</span>
             </div>
             <div className="cont-footer-product-cart mt-2">

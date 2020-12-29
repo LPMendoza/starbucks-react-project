@@ -39,7 +39,7 @@ let Menu = () => {
             <div className="container" id="cont-menu-products">
                <div className="row align-items-center justify-content-beetween px-3" >
                   <h3 className="col-12 text-center mt-5 mb-lg-5 mb-4">
-                     {menuShowed ? "SELECCIONA UNA CATEGORIA" : "BEBIDAS DE CALIDAD PARA TI"}
+                     {menuShowed ? "SELECCIONA UNA CATEGORÍA" : "BEBIDAS DE CALIDAD PARA TI"}
                   </h3>
 
                </div>
