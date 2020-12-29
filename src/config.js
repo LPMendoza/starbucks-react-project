@@ -21,7 +21,7 @@ let config = {
     menuName: "Desayunos",
     imgMenu: imgLunch
   }, {
-    menuName: "Panaderia",
+    menuName: "Panadería",
     imgMenu: imgBakery
   }, {
     menuName: "Snacks & Sweets",
