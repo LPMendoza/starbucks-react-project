@@ -48,17 +48,17 @@ let NavBar = ({pageActive}) => {
                   <div className={`d-flex flex-row cont-navbar bg-light ${showMenu ? " showNavBar d-flex flex-column align-content-center" : "hideNavBar"}`} id="navbarNav">
                      <ul className={` mobile-ul navbar-nav mr-lg-5 mt-5 mt-lg-0`}>
                         <Link style={{ textDecoration: 'none' }} to={`${config.basePath}/`} className="nav-item" style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                           <li onClick={handleOnClick} className={`nav-item mr-lg-5 py-3 py-lg-0 ${activeItem === "home" ? "active" : ""}`}>
+                           <li onClick={handleOnClick} className={`nav-item mr-lg-5 py-3 py-lg-0 ${activeItem === "home" ? "active" : ""} col-12 col-lg-auto`}>
                               <a className={`nav-link`}>Inicio</a>
                            </li>
                         </Link>
                         <Link style={{ textDecoration: 'none' }} to={`${config.basePath}/menu`}>
-                           <li onClick={handleOnClick} className={`nav-item mr-lg-5 py-3 py-lg-0 ${activeItem === "menu" ? "active" : ""}`}>
+                           <li onClick={handleOnClick} className={`nav-item mr-lg-5 py-3 py-lg-0 ${activeItem === "menu" ? "active" : ""} col-12 col-lg-auto`}>
                               <a className={`nav-link`}>Menú</a>
                            </li>
                         </Link>
                         <Link style={{ textDecoration: 'none' }} to={`${config.basePath}/contact`}>
-                           <li onClick={handleOnClick} className={`nav-item ${activeItem === "contact" ? "active" : ""} py-3 py-lg-0`}>
+                           <li onClick={handleOnClick} className={`nav-item ${activeItem === "contact" ? "active" : ""} py-3 py-lg-0 col-12 col-lg-auto`}>
                               <a className={`nav-link`}>Contacto</a>
                            </li>
                         </Link>

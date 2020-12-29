@@ -48,7 +48,7 @@ let Home = () => {
                         <h1>¡ENTRA YA Y CONOCOCE NUESTRO <span>MENÚ!</span></h1>
                         <p className="text-light mt-4 col-9 col-md-9 px-0">Conoce y adquiere nuestros productos en el menú ahora mismo para comenzar estas fechas de lo mejor</p>
                         <Link to={`${config.basePath}/menu`}>
-                           <button onClick={(e) => window.scrollTo(0, 0)} type="button" className="btn btn-outline-light py-4 col-10 col-lg-7 my-5">ENTRAR AL MENÚ <span className="fas fa-arrow-right ml-2"></span></button>
+                           <button onClick={(e) => window.scrollTo(0, 0)} type="button" className="btn btn-outline-light py-4 col-11 col-lg-7 my-5">ENTRAR AL MENÚ <span className="fas fa-arrow-right ml-2"></span></button>
                         </Link>
                      </div>
                      <div className="col-10 col-md-6 px-0 text-right-land">

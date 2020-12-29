@@ -7,7 +7,7 @@ let Contact = () => {
    
    return (
       <React.Fragment>
-         <NavBar pageActive={"cart"} />
+         <NavBar pageActive={"contact"} />
          <section className="page bg-light page-menu">
             <article className="section-land bg-light section-magic mb-5 pb-5 pt-3">
                <div className="container">

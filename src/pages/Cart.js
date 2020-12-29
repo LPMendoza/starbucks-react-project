@@ -8,14 +8,13 @@ import config from '../config.js';
 let Cart = () => {
    let subTotal = 0;
    subTotal += config.cartItems.map((product) => parseFloat(product.quantity) * parseFloat(product.price)).reduce((a, b) => a + b);
-   console.log(subTotal)
    let sendPrice = 10;
    let total = subTotal + sendPrice;
    return (
       <React.Fragment>
          <NavBar pageActive={"cart"} />
          <section className="page bg-light-cream page-menu">
-            <article className="section-land section-magic mb-0 bg-light pb-5 pt-3">
+            <article className="section-land section-magic mb-0 bg-light pb-5 pt-lg-3">
                <div className="container">
                   <div className="row justify-content-center my-4">
 
