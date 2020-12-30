@@ -419,7 +419,7 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   font-size: 24px;
-  margin: 9px 16px 0px 0px;
+  margin-top: 1px;
 }
 
 .btnMenuClose .fa-bars {
@@ -1010,7 +1010,6 @@ button:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 0px !important;
   -webkit-animation: hideProducts 0.4s ease forwards;
           animation: hideProducts 0.4s ease forwards;
 }
@@ -1814,7 +1813,13 @@ button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0rem 0rem;
+    margin: 0rem 1.5rem;
+  }
+  .cont-cart-items {
+    min-width: 100% !important;
+  }
+  .cont-form-send {
+    min-width: 60% !important;
   }
 }
 

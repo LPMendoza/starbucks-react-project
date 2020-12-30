@@ -404,7 +404,7 @@ button:focus {
    justify-content: center;
    align-items: center;
    font-size: 24px;
-   margin: 9px 16px 0px 0px;
+   margin-top: 1px;
 
    .fa-bars {
       animation: flipBars 0.2s ease forwards;
@@ -871,7 +871,6 @@ button:focus {
 .cont-products-card {
    display: flex;
    flex-wrap: wrap;
-   height: 0px !important;
    animation: hideProducts 0.4s ease forwards;
 }
 
@@ -1301,7 +1300,15 @@ button:focus {
    .cont-card-product {
       display: flex;
       justify-content: center;
-      margin: 0rem 0rem;
+      margin: 0rem 1.5rem;
+   }
+
+   .cont-cart-items {
+      min-width: 100% !important;
+   }
+
+   .cont-form-send {
+      min-width: 60% !important;
    }
 
 }
@@ -1432,7 +1439,6 @@ button:focus {
 }
 
 @media screen and (max-width: 767px) {
-
    .card-cart {
       justify-content: center;
       flex-direction: column;

@@ -16,7 +16,7 @@ let Contact = () => {
                      <div className="col-12 col-lg-4 pr-md-0 cont-cart-items">
                         <FormContact />
                      </div>
-                     <div className="col-12 col-md-6 mt-5 mt-lg-0">
+                     <div className="col-12 col-lg-6 mt-5 mt-lg-0">
                         <SvgContact></SvgContact>
                      </div>
                   </div>

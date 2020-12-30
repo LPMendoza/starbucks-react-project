@@ -25,7 +25,7 @@ let Cart = () => {
                            config.cartItems.map((cart, index) => <CartItem key={index} cartItem={cart} />)
                      }
                      </div>
-                     <div className="col-12 col-lg-4 pr-md-0">
+                     <div className="col-12 col-lg-4 pr-md-0 cont-form-send">
                         <FormSend subTotal={subTotal} sendPrice={sendPrice} total={total} />
                      </div>
                   </div>
