@@ -59,12 +59,17 @@ let NavBar = ({pageActive}) => {
                </Link>
                
                <div className="cont-cart-menu">
-                  <div className={`d-flex flex-row flex-column align-content-center cont-navbar bg-light ${showMenu ? showNavbar() : hideNavBar()}`} id="navbarNav">
-                     <button 
-                     onClick={showMenuClick} 
-                     className={`btn btn-light btnMenuClose ml-auto d-flex d-lg-none`}>
-                        <span className={`${showMenu ? "fas fa-times" : "fas fa-bars"}`}></span>
-                     </button>
+                  <div className={`d-flex flex-row flex-column align-content-center cont-navbar pt-2 bg-light ${showMenu ? showNavbar() : ""}`} id="navbarNav">
+                     
+                     <div className={`w-100 d-flex flex-row flex-column align-content-center justify-content-end bg-light`}>
+                        <div className="container px-0 d-flex justify-content-end">
+                           <button 
+                           onClick={showMenuClick} 
+                           className={`btn btn-light btnMenuClose ml-md-4 mr-3 mr-sm-0 d-flex d-lg-none`}>
+                              <span className="text-dark fas fa-times"></span>
+                           </button>
+                        </div>
+                     </div>
                      <ul className={` mobile-ul navbar-nav mr-lg-5 mt-5 mt-lg-0`}>
                         <Link style={{ textDecoration: 'none' }} to={`${config.basePath}/`} className="nav-item" style={{ color: 'inherit', textDecoration: 'inherit' }}>
                            <li onClick={handleOnClick} className={`nav-item mr-lg-5 py-3 py-lg-0 ${activeItem === "home" ? "active" : ""} col-12 col-lg-auto`}>
@@ -94,7 +99,7 @@ let NavBar = ({pageActive}) => {
                   <button 
                   onClick={showMenuClick} 
                   className={`btn btn-light btnMenu ml-4 d-flex d-lg-none`}>
-                     <span className={`${showMenu ? "fas fa-times" : "fas fa-bars"}`}></span>
+                     <span className="fas fa-bars"></span>
                   </button>
                </div>
             </div>

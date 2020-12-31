@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from '../components/NavBar.js';
-import SvgLandFooter from '../components/SvgLandFooter.js';
+import SvgLandRelax from '../components/SvgLandRelax.js';
 import SvgLandShare from '../components/SvgLandShare.js';
 import SvgLandMagic from '../components/SvgLandMagic.js';
 import { Link } from 'react-router-dom';
@@ -52,7 +52,7 @@ let Home = () => {
                         </Link>
                      </div>
                      <div className="col-10 col-md-6 px-0 text-right-land">
-                        <SvgLandFooter></SvgLandFooter>
+                        <SvgLandRelax></SvgLandRelax>
                      </div>
                   </div>
                </div>

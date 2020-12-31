@@ -237,6 +237,10 @@ button:focus {
   margin: auto;
 }
 
+header > .navbar {
+  overflow: hidden;
+}
+
 .navbar-nav a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,16 +396,6 @@ button:focus {
   font-size: 24px;
 }
 
-.btnMenu .fa-bars {
-  -webkit-animation: flipBars 0.2s ease forwards;
-          animation: flipBars 0.2s ease forwards;
-}
-
-.btnMenu .fa-times {
-  -webkit-animation: flipTimes 0.2s ease forwards;
-          animation: flipTimes 0.2s ease forwards;
-}
-
 .btnMenuClose {
   color: #1e3932cc;
   padding: 0 !important;
@@ -419,17 +413,7 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   font-size: 24px;
-  margin: 9px 16px 0px 0px;
-}
-
-.btnMenuClose .fa-bars {
-  -webkit-animation: flipBars 0.2s ease forwards;
-          animation: flipBars 0.2s ease forwards;
-}
-
-.btnMenuClose .fa-times {
-  -webkit-animation: flipTimes 0.2s ease forwards;
-          animation: flipTimes 0.2s ease forwards;
+  margin-top: 1px;
 }
 
 .navbar-top-showed {
@@ -458,14 +442,15 @@ button:focus {
 }
 
 .cont-cards-menu {
-  border-radius: 30px;
   margin-top: 0rem !important;
+  border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-x: hidden;
 }
 
 .cont-cards-menu .card-menu {
@@ -1010,7 +995,6 @@ button:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 0px !important;
   -webkit-animation: hideProducts 0.4s ease forwards;
           animation: hideProducts 0.4s ease forwards;
 }
@@ -1067,65 +1051,9 @@ button:focus {
           animation: pointContact 1s ease 0.5s infinite;
 }
 
-#hearts-magic {
-  -webkit-animation: heartsUp 2.2s linear infinite;
-          animation: heartsUp 2.2s linear infinite;
-}
-
-#leafs {
-  -webkit-animation: leafsShake 2.5s linear infinite;
-          animation: leafsShake 2.5s linear infinite;
-}
-
-#hand-drink-man,
-#arm-left-girl {
-  -webkit-animation: armsShakeMan 2.5s ease-out infinite;
-          animation: armsShakeMan 2.5s ease-out infinite;
-}
-
-#hand-drink-girl {
-  -webkit-animation: armsShakeGirl 2.5s ease-in-out infinite;
-          animation: armsShakeGirl 2.5s ease-in-out infinite;
-}
-
-#plant-balance {
-  -webkit-animation: armsShakePlant 2.5s ease-in-out infinite;
-          animation: armsShakePlant 2.5s ease-in-out infinite;
-}
-
-#star-tree-light-share {
-  -webkit-animation: starLight 3s ease infinite;
-          animation: starLight 3s ease infinite;
-}
-
-#star-light-circle-share {
-  -webkit-animation: starLightCircle 3s ease infinite;
-          animation: starLightCircle 3s ease infinite;
-}
-
-#star-tree-share {
-  -webkit-animation: starLightTree 3s ease infinite;
-          animation: starLightTree 3s ease infinite;
-}
-
 #smoke-coffee-relax {
   -webkit-animation: smokeUp 2s ease infinite;
           animation: smokeUp 2s ease infinite;
-}
-
-#star-tree-light-relax {
-  -webkit-animation: starLightRelax 3s ease infinite !important;
-          animation: starLightRelax 3s ease infinite !important;
-}
-
-#star-light-circle-relax {
-  -webkit-animation: starLightCircleRelax 3s ease infinite !important;
-          animation: starLightCircleRelax 3s ease infinite !important;
-}
-
-#star-tree-relax {
-  -webkit-animation: starLightTreeRelax 3s ease infinite !important;
-          animation: starLightTreeRelax 3s ease infinite !important;
 }
 
 @-webkit-keyframes pointContact {
@@ -1806,6 +1734,7 @@ button:focus {
 @media screen and (max-width: 1196px) {
   .cont-cards-menu {
     margin-top: 0rem !important;
+    overflow-x: hidden;
   }
   .cont-card-product {
     display: -webkit-box;
@@ -1814,11 +1743,41 @@ button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0rem 0rem;
+    margin: 0rem 1.5rem;
+  }
+  .cont-cart-items {
+    min-width: 100% !important;
+  }
+  .cont-form-send {
+    min-width: 60% !important;
   }
 }
 
 @media screen and (max-width: 993px) {
+  .cont-navbar {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    -webkit-transition: right 0.2s ease;
+    transition: right 0.2s ease;
+    z-index: 100;
+  }
+  .cont-navbar ul {
+    width: 100%;
+  }
+  .cont-navbar ul a {
+    border-bottom: 1px solid #F2F0EB;
+  }
+  .cont-navbar ul a a {
+    border-bottom: none;
+  }
+  .showNavBar {
+    right: 0%;
+    -webkit-transition: right 0.2s ease;
+    transition: right 0.2s ease;
+  }
   .cont-menus-card {
     height: 0px !important;
     -webkit-animation: hideMenuItems 0.4s ease forwards;
@@ -1826,51 +1785,6 @@ button:focus {
   }
   .cont-products-card {
     height: 0px !important;
-  }
-  .showNavBar {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0%;
-    right: 0%;
-    -webkit-transition: -webkit-clip-path .8s ease;
-    transition: -webkit-clip-path .8s ease;
-    transition: clip-path .8s ease;
-    transition: clip-path .8s ease, -webkit-clip-path .8s ease;
-    -webkit-clip-path: circle(200% at top right);
-            clip-path: circle(200% at top right);
-    z-index: 100;
-  }
-  .showNavBar ul a, .showNavBar ul a:hover {
-    border-bottom: 1px solid #F2F0EB;
-  }
-  .showNavBar ul a a, .showNavBar ul a:hover a {
-    border-bottom: none;
-  }
-  .hideNavBar {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0%;
-    -webkit-animation: hideMenu 0s linear 2s forwards;
-            animation: hideMenu 0s linear 2s forwards;
-    -webkit-transition: -webkit-clip-path .8s ease;
-    transition: -webkit-clip-path .8s ease;
-    transition: clip-path .8s ease;
-    transition: clip-path .8s ease, -webkit-clip-path .8s ease;
-    -webkit-clip-path: circle(0% at top right);
-            clip-path: circle(0% at top right);
-    z-index: 100;
-  }
-  .hideNavBar ul {
-    width: 100%;
-  }
-  .hideNavBar ul a {
-    border-bottom: 1px solid #F2F0EB;
-  }
-  .hideNavBar ul a a {
-    border-bottom: none;
   }
   .logo-starbucks {
     width: 32px;
@@ -1916,7 +1830,7 @@ button:focus {
     margin-top: 3rem;
   }
   .cont-cards-menu {
-    border-radius: 30px;
+    overflow-x: hidden;
   }
   .footer .cont-menu {
     margin-left: 0rem;
