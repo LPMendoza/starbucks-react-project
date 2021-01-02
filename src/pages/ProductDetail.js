@@ -7,7 +7,7 @@ const ProductDetail = ({product, handleOnClose, showed}) => {
       <div className="w-100 d-flex d-lg-none align-items-end justify-content-end mb-0">
         <button
           onClick={(e) => handleOnClose({ product: product, showed: false })}
-          className={`btn btn-light btnProductClose ml-md-4 mr-2 d-flex mt-2`}>
+          className={`btn btnProductClose ml-md-4 mr-2 d-flex mt-2`}>
           <span className="text-dark fas fa-times"></span>
         </button>
       </div>

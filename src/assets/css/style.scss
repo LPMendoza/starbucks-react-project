@@ -13,11 +13,13 @@ $grayCreamActive:rgb(209, 209, 208);
 $greenDark: #006241;
 $greenAccent: #018a57;
 $greenDarkAccent: #00754A;
-$greenDarkAccentActive: #005f3c;
+$greenDarkAccentActive: #004b2f;
 $greenDarkAccentOp: rgba(0, 117, 74, 0.5);
 $greenDarkDepth: #1E3932;
 $greenClip: rgba(18, 32, 29, 0.822);
 $greenText: #1e3932cc;
+$placeholder: #1e39328c;
+
 $red: #AC0000;
 
 $imgFlowers: url("../img/flowers-background.svg");
@@ -130,8 +132,7 @@ button:focus {
    background-color: $greenAccent!important;
    border: none;
 
-   &:hover,
-   &:focus {
+   &:hover {
       border: none;
       background-color: $greenDark !important;
    }
@@ -139,6 +140,7 @@ button:focus {
    &:active {
       background-color: $greenDarkAccentActive !important;
    }
+
 }
 
 .btn-light {
@@ -661,7 +663,6 @@ header > .navbar {
    justify-content: space-around;
    flex-direction: column;
    position: relative;
-   cursor: pointer;
    transition: 0.2s ease;
 
    &:hover {
@@ -700,7 +701,13 @@ header > .navbar {
       color: $greenText;
    }
 
-   .image-product-card {
+   .product-info-card {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+   }
+
+   .product-info-card .image-product-card {
       margin: 0 auto;
       width: 128px;
       z-index: 1;
@@ -899,6 +906,10 @@ header > .navbar {
       &:focus {
          outline: none;
       }
+
+      &::placeholder {
+         color: $placeholder;
+      }
    }
 
    .textarea-custom {
@@ -975,6 +986,9 @@ header > .navbar {
    transition: 0.4s ease;
    overflow-y: auto !important;
 
+   &::-webkit-scrollbar {
+      width: 0;
+   }
    .cont-info-product {
       flex: 0 0 0;
    }

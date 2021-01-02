@@ -107,13 +107,13 @@ button:focus {
   border: none;
 }
 
-.btn-primary:hover, .btn-primary:focus {
+.btn-primary:hover {
   border: none;
   background-color: #006241 !important;
 }
 
 .btn-primary:active {
-  background-color: #005f3c !important;
+  background-color: #004b2f !important;
 }
 
 .btn-light {
@@ -291,7 +291,7 @@ button:focus {
 }
 
 .btn-outline-green:active {
-  background-color: #005f3c;
+  background-color: #004b2f;
 }
 
 .btn-outline-green:hover svg > path {
@@ -710,7 +710,6 @@ header > .navbar {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  cursor: pointer;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -760,7 +759,18 @@ header > .navbar {
   color: #1e3932cc;
 }
 
-.card-product .image-product-card {
+.card-product .product-info-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.card-product .product-info-card .image-product-card {
   margin: 0 auto;
   width: 128px;
   z-index: 1;
@@ -1024,6 +1034,22 @@ header > .navbar {
   outline: none;
 }
 
+.cont-input-form .input-custom::-webkit-input-placeholder {
+  color: #1e39328c;
+}
+
+.cont-input-form .input-custom:-ms-input-placeholder {
+  color: #1e39328c;
+}
+
+.cont-input-form .input-custom::-ms-input-placeholder {
+  color: #1e39328c;
+}
+
+.cont-input-form .input-custom::placeholder {
+  color: #1e39328c;
+}
+
 .cont-input-form .textarea-custom {
   height: 55px;
 }
@@ -1126,6 +1152,10 @@ header > .navbar {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   overflow-y: auto !important;
+}
+
+.cont-page-details::-webkit-scrollbar {
+  width: 0;
 }
 
 .cont-page-details .cont-info-product {

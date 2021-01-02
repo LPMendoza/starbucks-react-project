@@ -52,10 +52,10 @@ let NavBar = ({pageActive}) => {
          <nav className="bg-light navbar navbar-light navbar-expand-lg pt-2 mb-4">
             <div className="container px-0">
                <Link style={{ textDecoration: 'none' }} to={`${config.basePath}/`}>
-                  <span className="navbar-brand mr-lg-5">
+                  <a onClick={handleOnClick} className="navbar-brand mr-lg-5">
                      <img className="mr-2 logo-starbucks" src={Logo}></img>
                      STARBUCKS
-                  </span>
+                  </a>
                </Link>
                
                <div className="cont-cart-menu">
