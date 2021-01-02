@@ -37,7 +37,7 @@ let FormSend = ({subTotal, sendPrice, total}) => {
             </div>
          </div>
         
-         <button className="btn btn-block btn-primary mt-3">Finalizar compra <span className="fas fa-check ml-2"></span></button>
+         <button className="btn btn-block btn-primary mt-3 pl-3">Finalizar compra <span className="fas fa-check ml-2"></span></button>
       </div>
    )
 

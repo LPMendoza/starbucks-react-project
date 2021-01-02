@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import NavBar from '../components/NavBar.js';
 import CartItem from '../components/CartItem.js';
 import FormSend from '../components/FormSend.js';
+import ProductDetail from '../pages/ProductDetail.js';
 
 import config from '../config.js';
 
@@ -10,6 +11,21 @@ let Cart = () => {
    subTotal += config.cartItems.map((product) => parseFloat(product.quantity) * parseFloat(product.price)).reduce((a, b) => a + b);
    let sendPrice = 10;
    let total = subTotal + sendPrice;
+
+   const [productDetail, setProductDetail] = useState({
+      product: "",
+      showed: false
+   });
+
+   if (productDetail.showed) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+   } else {
+      document.body.style.overflow = "unset";
+      document.documentElement.style.overflow = "unset";
+   }
+
+
    return (
       <React.Fragment>
          <NavBar pageActive={"cart"} />
@@ -22,7 +38,7 @@ let Cart = () => {
                         <h4 className="text-dark text-center text-md-left pl-md-3 mb-5">Carrito de compras</h4>
 
                      {
-                           config.cartItems.map((cart, index) => <CartItem key={index} cartItem={cart} />)
+                           config.cartItems.map((cart, index) => <CartItem key={index} cartItem={cart} handleOnClickProduct={setProductDetail}/>)
                      }
                      </div>
                      <div className="col-12 col-lg-4 pr-md-0 cont-form-send">
@@ -31,12 +47,9 @@ let Cart = () => {
                   </div>
                </div>
             </article>
-            {/* <article className="bg-primary pb-3 wave-div-contact mt-5">
-              <svg className="img-fluid wave-light" viewBox="0 0 1326 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1329 0H-2V50.2724C4.35961 50.2724 108.456 15.5883 205.357 15.5883C398.822 15.5883 416.73 79.5005 478.988 79.5005C541.245 79.5005 645.174 38.1914 768.685 38.1914C892.195 38.1914 882.154 66.2504 997.631 79.5005C1090.01 90.1005 1257.04 64.4318 1329 50.2724V0Z" className="fill-gray" />
-              </svg>
-            </article> */}
          </section>
+            <ProductDetail showed={productDetail.showed} product={productDetail.product} handleOnClose={setProductDetail}/>
+
       </React.Fragment>
    )
 }

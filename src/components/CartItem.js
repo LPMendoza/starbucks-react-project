@@ -1,12 +1,18 @@
 import React from 'react';
 
-let CartItem = ({cartItem}) => {
+let CartItem = ({cartItem, handleOnClickProduct}) => {
+   const clickProduct = (e) => {
+      handleOnClickProduct({
+         product: cartItem,
+         showed: true
+      })
+   } 
    return (
          <div className="card-cart px-4 py-3 mt-0 mb-4">
             <button className="btn btn-light rounded-circle btn-delete-cart d-flex d-md-none ml-auto">
                <span className="fas fa-times text-dark"></span>
             </button>
-            <div className="cont-cart-product justify-content-center">
+            <div onClick={clickProduct} className="cont-cart-product justify-content-center">
                <img className="image-cart-card mr-lg-4" src={cartItem.imgProduct} />
                <div className="cont-data-cart-item col-12 col-md-auto my-4 my-md-auto">
                   <p className="cart-name-card mb-0">{cartItem.productName}</p>
