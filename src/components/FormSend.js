@@ -21,19 +21,23 @@ let FormSend = ({subTotal, sendPrice, total}) => {
             <label className="lbl-form"> Teléfono </label>
             <input type="text" className="input-custom" />
          </div>
-         <div className="cont-subtotal d-flex justify-content-between">
-            <label>Subtotal</label>
-            <label>${subTotal.toFixed(2)}</label>
+
+         <div className="cont-total-buy">
+            <div className="cont-subtotal d-flex justify-content-between">
+               <label>Subtotal</label>
+               <label>${subTotal.toFixed(2)}</label>
+            </div>
+            <div className="cont-sendPrice d-flex justify-content-between">
+               <label>Envío</label>
+               <label>${sendPrice.toFixed(2)}</label>
+            </div>
+            <div className="cont-total d-flex justify-content-between">
+               <label>Total</label>
+               <label>${total.toFixed(2)}</label>
+            </div>
          </div>
-         <div className="cont-sendPrice d-flex justify-content-between">
-            <label>Envío</label>
-            <label>${sendPrice.toFixed(2)}</label>
-         </div>
-         <div className="cont-total d-flex justify-content-between">
-            <label>Total</label>
-            <label>${total.toFixed(2)}</label>
-         </div>
-         <button className="btn btn-block btn-primary mt-3">Finalizar compra</button>
+        
+         <button className="btn btn-block btn-primary mt-3 pl-3">Finalizar compra <span className="fas fa-check ml-2"></span></button>
       </div>
    )
 
