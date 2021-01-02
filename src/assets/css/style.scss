@@ -589,6 +589,9 @@ header > .navbar {
    }
 
    .cont-filter-menu {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
       .cont-search {
          height: 40px;
          justify-content: space-between;

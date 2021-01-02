@@ -620,6 +620,18 @@ header > .navbar {
       flex-wrap: wrap;
 }
 
+.ctrlProducts .cont-filter-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .ctrlProducts .cont-filter-menu .cont-search {
   height: 40px;
   -webkit-box-pack: justify;
