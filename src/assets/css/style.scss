@@ -1,6 +1,8 @@
 $leafsImage: url("../img/flowers-background.svg");
 $fontTitle: url("../fonts/Futura-Bold.otf");
 $fontText: url("../fonts/MyriadPro-Regular.otf");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 $fontTitleName: "Futura-Bold";
 $fontTextName: "Myriad-Regular";
 
@@ -38,7 +40,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-   background: $greenDarkDepth;
+   background: $grayCreamActive;
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -46,7 +48,30 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 body::-webkit-scrollbar-thumb:horizontal {
-   background: $greenDarkDepth;
+   background: $grayCreamActive;
+}
+
+
+div::-webkit-scrollbar-track {
+   background: $grayLight;
+}
+
+div::-webkit-scrollbar {
+   background: rgba(0, 0, 0, 0);
+   width: 10px;
+   height: 0px;
+}
+
+div::-webkit-scrollbar-thumb {
+   background: $grayCreamActive;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+   background: $greenDark;
+}
+
+div::-webkit-scrollbar-thumb:horizontal {
+   background: $grayCreamActive;
 }
 
 @font-face {
@@ -61,7 +86,7 @@ body::-webkit-scrollbar-thumb:horizontal {
 
 body {
    background-color: $grayLight;
-   font-family: $fontTextName, "Open Sans";
+   font-family: "Roboto", "Open Sans";
    scroll-behavior: smooth !important;
 }
 
@@ -102,13 +127,13 @@ button:focus {
 }
 
 .btn-primary {
-   background-color: $greenAccent !important;
+   background-color: $greenAccent!important;
    border: none;
 
    &:hover,
    &:focus {
       border: none;
-      background-color: $greenDark!important;
+      background-color: $greenDark !important;
    }
 
    &:active {
@@ -126,6 +151,19 @@ button:focus {
    }
    &:active {
       background-color: $grayCreamActive !important;
+   }
+}
+
+.btn-light-cream {
+   background-color: $grayCream!important;
+   border: none;
+   
+   &:hover, &:focus {
+      border: none;
+      background-color: #d3d0ca !important;
+   }
+   &:active {
+      background-color: #b8b5af !important;
    }
 }
 
@@ -230,7 +268,6 @@ button:focus {
       background-color: $greenDark;
       color: $white;
       border-radius: 50px;
-      font-family: $fontTitleName;
       letter-spacing: .2rem;
       transition: 0.2s ease-in;
 
@@ -240,6 +277,31 @@ button:focus {
          color: $greenText;
          transition: 0.2s ease-in;
       }
+   }
+
+}
+
+.btn-outline-green {
+   border: 2px solid $greenDarkAccent;
+   color: $greenDarkAccent;
+   border-radius: 50px;
+   transition: 0.2s ease-in;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &:hover {
+      border: 2px solid $greenAccent;
+      background-color: $greenAccent;
+      color: $white;
+      transition: 0.2s ease;
+   }
+
+   &:active {
+      background-color: $greenDarkAccentActive;
+   }
+
+   &:hover svg > path {
+      fill: $white;
    }
 }
 
@@ -436,7 +498,7 @@ header > .navbar {
 }
 
 .article-menu {
-   background-image: $imgFlowersLight;
+   background-image: $imgFlowers;
    background-size: 100%;
    background-repeat: no-repeat;
    background-position: center;
@@ -599,7 +661,7 @@ header > .navbar {
    justify-content: space-around;
    flex-direction: column;
    position: relative;
-   //cursor: pointer;
+   cursor: pointer;
    transition: 0.2s ease;
 
    &:hover {
@@ -645,8 +707,8 @@ header > .navbar {
    }
 
    .btn-cart {
-      width: 64px !important;
-      height: 64px !important;
+      width: 56px !important;
+      height: 56px !important;
       align-self: flex-end;
       border: none;
    }
@@ -660,7 +722,7 @@ header > .navbar {
    }
 
    .cart-plus {
-      width: 32px;
+      width: 28px;
    }
 
 }
@@ -898,6 +960,48 @@ header > .navbar {
    }
 }
 
+.cont-page-details {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   right: -100%;
+   height: 100% !important;
+   max-height: 100% !important;
+   z-index: 1500;
+   opacity: 0;
+   transition: 0.4s ease;
+   overflow-y: scroll !important;
+
+   .cont-info-product {
+      flex: 0 0 0;
+   }
+   &.showed-details {
+      opacity: 1;
+      right: 0%;
+   }
+
+}
+
+.page-product-detail {
+   
+   min-height: 100%;
+   .cont-close-product-detail {
+      position: absolute;
+      top: 0% !important;
+      right: 1rem !important;
+   }
+
+   h1 {
+      color: $greenDarkAccent;
+   }
+
+   .product-price-detail{
+      font-weight: bold;
+      font-size: 24px;
+   }
+}
+
+
 #point-contact-1 {
    animation: pointContact 1s ease infinite;
 }
@@ -908,54 +1012,9 @@ header > .navbar {
    animation: pointContact 1s ease 0.5s infinite;
 }
 
-// #hearts-magic {
-//    animation: heartsUp 2.2s linear infinite;
-// }
-
-// #leafs {
-//    animation: leafsShake 2.5s linear infinite;
-// }
-
-// #hand-drink-man,
-// #arm-left-girl {
-//    animation: armsShakeMan 2.5s ease-out infinite;
-// }
-
-// #hand-drink-girl {
-//    animation: armsShakeGirl 2.5s ease-in-out infinite;
-// }
-
-// #plant-balance {
-//    animation: armsShakePlant 2.5s ease-in-out infinite;
-// }
-
-// #star-tree-light-share {
-//    animation: starLight 3s ease infinite;
-// }
-
-// #star-light-circle-share {
-//    animation: starLightCircle 3s ease infinite;
-// }
-
-// #star-tree-share {
-//    animation: starLightTree 3s ease infinite;
-// }
-
 #smoke-coffee-relax {
    animation: smokeUp 2s ease infinite;
 }
-
-// #star-tree-light-relax {
-//    animation: starLightRelax 3s ease infinite !important;
-// }
-
-// #star-light-circle-relax {
-//    animation: starLightCircleRelax 3s ease infinite !important;
-// }
-
-// #star-tree-relax {
-//    animation: starLightTreeRelax 3s ease infinite !important;
-// }
 
 @keyframes pointContact {
    0% {
@@ -1023,12 +1082,12 @@ header > .navbar {
 @keyframes showProducts {
    from {
       opacity: 0;
-      margin-right: -100%;
+      right: -100%;
    }
 
    to {
       opacity: 1;
-      margin-left: 0%;
+      right: 0%;
    }
 }
 
@@ -1448,6 +1507,35 @@ header > .navbar {
       display: flex;
       flex-direction: column;
       align-items: center !important;
+   }
+
+   .page-product-detail {
+
+      .cont-close-product-detail {
+         position: sticky;
+         top: 0;
+         right: 0;
+      }
+
+      h1 {
+         color: $greenDarkAccent;
+         font-size: 24px;
+      }
+
+      .product-description-detail {
+         font-size: 14px;
+      }
+
+      &.showed-details {
+         opacity: 1;
+         right: 0%;
+      }
+
+      .product-price-detail {
+         font-weight: bold;
+         font-size: 24px;
+      }
+
    }
 
 }

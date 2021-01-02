@@ -24,7 +24,7 @@ let FormContact = () => {
             <input type="text" className="input-custom" />
          </div>
 
-         <button className="btn btn-block btn-primary mt-5">Enviar</button>
+         <button className="btn btn-block btn-primary mt-5">Enviar <span className="fas fa-check ml-2"></span></button>
       </div>
    )
 
