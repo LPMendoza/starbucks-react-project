@@ -29,7 +29,7 @@ const ProductDetail = ({product, handleOnClose, showed}) => {
                 </button>
               </div>
             </div>
-            <div className="col-md-10 col-12 px-0 cont-info-product mx-md-4 mb-2 mb-md-0">
+            <div className="col-md-10 col-12 px-0 cont-info-product mx-3 mx-md-4 mb-2 mb-md-0">
               <h1 className="mb-4 product-name-detail mt-4 mt-lg-0">{product != null ? product.productName : ""}</h1>
               <p className="text-primary col-md-10 px-0 mb-md-4 product-description-detail">{product != null ? product.description : ""}</p>
               <p className="text-primary product-price-detail mb-3 mb-md-5">${parseFloat(product != null ? product.price : "").toFixed(2)}</p>
