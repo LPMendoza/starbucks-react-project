@@ -79,6 +79,18 @@ div::-webkit-scrollbar-thumb:horizontal {
    background: $grayCreamActive;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @font-face {
    font-family: $fontTitleName;
    src: $fontTitle;
@@ -91,9 +103,19 @@ div::-webkit-scrollbar-thumb:horizontal {
 
 body {
    background-color: $grayLight;
-   font-family: "Roboto", "Open Sans";
+   font-family: "Roboto", "Myriad-Regular", "Open Sans";
    scroll-behavior: smooth !important;
 }
+
+::-moz-selection { /* Code for Firefox */
+   color: white;
+   background: $greenAccent;
+ }
+ 
+ ::selection {
+   color: white;
+   background: $greenAccent;
+ }
 
 
 h1,
@@ -589,7 +611,6 @@ header > .navbar {
    justify-content: space-between;
    flex-wrap: wrap;
    font-size: 16px !important;
-   font-family: $fontTextName;
    color: $greenText;
    opacity: 0;
    animation: ctrlProducts 0.2s ease 0.5s forwards;
@@ -697,7 +718,6 @@ header > .navbar {
    .product-name-card {
       font-size: 18px;
       color: $greenDarkAccent;
-      font-family: $fontTextName;
       font-weight: bold;
       height: 48px;
    }
@@ -715,7 +735,6 @@ header > .navbar {
 
    .product-price-card {
       font-size: 18px;
-      font-family: $fontTextName;
       font-weight: bold;
       color: $greenText;
    }
@@ -791,7 +810,6 @@ header > .navbar {
    .cart-name-card {
       font-size: 16px;
       color: $greenDarkAccent;
-      font-family: $fontTextName;
       font-weight: bold;
    }
 
@@ -810,7 +828,6 @@ header > .navbar {
    .cart-price-card {
       font-size: 16px;
       font-weight: bold;
-      font-family: $fontTextName;
       color: $greenText;
    }
 
@@ -870,7 +887,6 @@ header > .navbar {
       font-weight: bold;
       width: 80px;
       text-align: center;
-      font-family: $fontTextName;
       color: $greenText;
    }
 

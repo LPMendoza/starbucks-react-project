@@ -48,6 +48,18 @@ div::-webkit-scrollbar-thumb:horizontal {
   background: #d1d1d0;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @font-face {
   font-family: "Futura-Bold";
   src: url("../fonts/Futura-Bold.otf");
@@ -60,8 +72,19 @@ div::-webkit-scrollbar-thumb:horizontal {
 
 body {
   background-color: #f9f9f9;
-  font-family: "Roboto", "Open Sans";
+  font-family: "Roboto", "Myriad-Regular", "Open Sans";
   scroll-behavior: smooth !important;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #018a57;
+}
+
+::selection {
+  color: white;
+  background: #018a57;
 }
 
 h1,
@@ -617,7 +640,6 @@ header > .navbar {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 16px !important;
-  font-family: "Myriad-Regular";
   color: #1e3932cc;
   opacity: 0;
   -webkit-animation: ctrlProducts 0.2s ease 0.5s forwards;
@@ -762,7 +784,6 @@ header > .navbar {
 .card-product .product-name-card {
   font-size: 18px;
   color: #00754A;
-  font-family: "Myriad-Regular";
   font-weight: bold;
   height: 48px;
 }
@@ -786,7 +807,6 @@ header > .navbar {
 
 .card-product .product-price-card {
   font-size: 18px;
-  font-family: "Myriad-Regular";
   font-weight: bold;
   color: #1e3932cc;
 }
@@ -894,7 +914,6 @@ header > .navbar {
 .card-cart .cart-name-card {
   font-size: 16px;
   color: #00754A;
-  font-family: "Myriad-Regular";
   font-weight: bold;
 }
 
@@ -920,7 +939,6 @@ header > .navbar {
 .card-cart .cart-price-card {
   font-size: 16px;
   font-weight: bold;
-  font-family: "Myriad-Regular";
   color: #1e3932cc;
 }
 
@@ -1004,7 +1022,6 @@ header > .navbar {
   font-weight: bold;
   width: 80px;
   text-align: center;
-  font-family: "Myriad-Regular";
   color: #1e3932cc;
 }
 

@@ -1,25 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 let FormSend = ({subTotal, sendPrice, total}) => {
+
+   const [form ,setForm] = useState({
+      name: '',
+      street: '', 
+      code: '', 
+      phone: ''
+   })
+
+   const handleOnChange = (e) => {
+      setForm({
+         ...form,
+         [e.target.name]: e.target.value
+      })
+   }
+
+   const handleOnClick = (e) => {
+      setForm({
+         name: '',
+         street: '', 
+         code: '', 
+         phone: ''
+      });
+   }
 
    return (
       <div className="form-send p-4 bg-white">
          <h5 className="text-center mb-5">Información de envío</h5>
          <div className="cont-input-form mb-4">
             <label className="lbl-form"> Nombre completo <span>*</span> </label>
-            <input type="text" className="input-custom" required/>
+            <input name="name" value={form.name} onChange={handleOnChange} type="text" className="input-custom" required/>
          </div>
          <div className="cont-input-form mb-4">
             <label className="lbl-form"> Calle y número <span>*</span></label>
-            <input type="text" className="input-custom" required/>
+            <input name="street" value={form.street} onChange={handleOnChange} type="text" className="input-custom" required/>
          </div>
          <div className="cont-input-form mb-4 w-50">
             <label className="lbl-form"> Código postal <span>*</span></label>
-            <input type="text" className="input-custom" required/>
+            <input name="code" value={form.code} onChange={handleOnChange} type="text" className="input-custom" required/>
          </div>
          <div className="cont-input-form mb-5">
             <label className="lbl-form"> Teléfono </label>
-            <input type="text" className="input-custom" required/>
+            <input name="phone" value={form.phone} onChange={handleOnChange} type="number" className="input-custom" required/>
          </div>
 
          <div className="cont-total-buy">
@@ -37,7 +60,7 @@ let FormSend = ({subTotal, sendPrice, total}) => {
             </div>
          </div>
         
-         <button className="btn btn-block btn-primary mt-3 pl-3">Finalizar compra <span className="fas fa-check ml-2"></span></button>
+         <button onClick={handleOnClick} className="btn btn-block btn-primary mt-3 pl-3">Finalizar compra <span className="fas fa-check ml-2"></span></button>
       </div>
    )
 
