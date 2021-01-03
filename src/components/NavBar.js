@@ -32,14 +32,23 @@ let NavBar = ({pageActive}) => {
    const handleOnClick = (e) => {
       window.scrollTo(0, 0);
       document.body.style.overflow = 'unset';
-      document.documentElement.style.overflowY = 'unset';
+      document.documentElement.style.overflow = 'unset';
    }
 
    const showMenuClick = (e) => {
+      if(!showMenu) {
+         document.body.style.overflow = "hidden";
+         document.documentElement.style.overflow = "hidden";
+      }
+      else {
+         document.body.style.overflow = 'unset';
+         document.documentElement.style.overflow = 'unset';
+      }
       setShowMenu(showMenu ? false : true);
    }
 
    const showNavbar = () => {
+
       return "showNavBar";
    }
 

@@ -13,12 +13,10 @@ let ProductCard = ({productItem, handleOnClick}) => {
    return (
       <div className="col-12 col-md-5 col-lg-3 px-0 mb-3 cont-card-product">
          <div className="card-product py-2 mt-0">
-            <div onClick={showProductClick} className="product-info-card col-12 px-0">
-               <img className="image-product-card mt-2" src={productItem.imgProduct} />
-               <div className="mx-4">
-                  <p className="product-name-card mt-4 mb-3  col-9 px-0">{productItem.productName}</p>
-                  <span className=" product-categorie-card">{productItem.category}</span>
-               </div>
+            <div onClick={showProductClick} className="product-info-card px-0 mx-4">
+               <img className="image-product-card mt-2 mb-4" src={productItem.imgProduct} />
+               <p className="product-name-card col-9 px-0">{productItem.productName}</p>
+               <span className=" product-categorie-card">{productItem.category}</span>
             </div>
             <div className="cont-footer-product-cart mt-2">
                <span className="mx-0 product-price-card mx-4">{"$" + parseFloat(productItem.price).toFixed(2)}</span>
