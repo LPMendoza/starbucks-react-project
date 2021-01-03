@@ -112,6 +112,11 @@ button:focus {
   background-color: #006241 !important;
 }
 
+.btn-primary:focus {
+  -webkit-box-shadow: 0px 0px 0px 3px #018a588e !important;
+          box-shadow: 0px 0px 0px 3px #018a588e !important;
+}
+
 .btn-primary:active {
   background-color: #004b2f !important;
 }
@@ -126,6 +131,11 @@ button:focus {
   background-color: #F2F0EB !important;
 }
 
+.btn-light:focus {
+  -webkit-box-shadow: 0px 0px 0px 3px #f2f0eb96 !important;
+          box-shadow: 0px 0px 0px 3px #f2f0eb96 !important;
+}
+
 .btn-light:active {
   background-color: #d1d1d0 !important;
 }
@@ -138,6 +148,11 @@ button:focus {
 .btn-light-cream:hover, .btn-light-cream:focus {
   border: none;
   background-color: #d3d0ca !important;
+}
+
+.btn-light-cream:focus {
+  -webkit-box-shadow: 0px 0px 0px 3px #f2f0eb96 !important;
+          box-shadow: 0px 0px 0px 3px #f2f0eb96 !important;
 }
 
 .btn-light-cream:active {
@@ -463,6 +478,10 @@ header > .navbar {
       -ms-flex-align: center;
           align-items: center;
   font-size: 24px;
+}
+
+.btnMenu svg {
+  width: 24px;
 }
 
 .btnMenuClose, .btnProductClose {
@@ -799,6 +818,8 @@ header > .navbar {
 
 .card-product .btn-cart:focus {
   background-color: #00754A !important;
+  -webkit-box-shadow: 0px 0px 0px 3px #018a588e !important;
+          box-shadow: 0px 0px 0px 3px #018a588e !important;
   border: none;
 }
 
@@ -1041,10 +1062,22 @@ header > .navbar {
   border-radius: 30px;
   color: #1e3932cc;
   overflow-y: hidden;
+  -webkit-transition: -webkit-box-shadow 0.2s ease;
+  transition: -webkit-box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
-.cont-input-form .input-custom:focus {
+.cont-input-form .input-custom:focus, .cont-input-form .input-custom:hover {
+  -webkit-box-shadow: 0px 0px 0px 3px #f2f0eb96 !important;
+          box-shadow: 0px 0px 0px 3px #f2f0eb96 !important;
   outline: none;
+}
+
+.cont-input-form .input-custom:valid {
+  -webkit-box-shadow: 0px 0px 0px 3px #018a588e !important;
+          box-shadow: 0px 0px 0px 3px #018a588e !important;
+  background-color: white;
 }
 
 .cont-input-form .input-custom::-webkit-input-placeholder {

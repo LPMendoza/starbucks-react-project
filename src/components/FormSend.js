@@ -7,19 +7,19 @@ let FormSend = ({subTotal, sendPrice, total}) => {
          <h5 className="text-center mb-5">Información de envío</h5>
          <div className="cont-input-form mb-4">
             <label className="lbl-form"> Nombre completo <span>*</span> </label>
-            <input type="text" className="input-custom"/>
+            <input type="text" className="input-custom" required/>
          </div>
          <div className="cont-input-form mb-4">
             <label className="lbl-form"> Calle y número <span>*</span></label>
-            <input type="text" className="input-custom" />
+            <input type="text" className="input-custom" required/>
          </div>
          <div className="cont-input-form mb-4 w-50">
             <label className="lbl-form"> Código postal <span>*</span></label>
-            <input type="text" className="input-custom" />
+            <input type="text" className="input-custom" required/>
          </div>
          <div className="cont-input-form mb-5">
             <label className="lbl-form"> Teléfono </label>
-            <input type="text" className="input-custom" />
+            <input type="text" className="input-custom" required/>
          </div>
 
          <div className="cont-total-buy">

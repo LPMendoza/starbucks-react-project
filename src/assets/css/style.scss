@@ -19,6 +19,9 @@ $greenDarkDepth: #1E3932;
 $greenClip: rgba(18, 32, 29, 0.822);
 $greenText: #1e3932cc;
 $placeholder: #1e39328c;
+$box-focus-green: 0px 0px 0px 3px #018a588e !important;
+$box-focus-red: 0px 0px 0px 3px #ac00008f !important;
+$box-focus-cream: 0px 0px 0px 3px #f2f0eb96 !important;
 
 $red: #AC0000;
 
@@ -137,6 +140,10 @@ button:focus {
       background-color: $greenDark !important;
    }
 
+   &:focus {
+      box-shadow: $box-focus-green;
+   }
+
    &:active {
       background-color: $greenDarkAccentActive !important;
    }
@@ -151,6 +158,9 @@ button:focus {
       border: none;
       background-color: $grayCream !important;
    }
+   &:focus {
+      box-shadow: $box-focus-cream;
+   }
    &:active {
       background-color: $grayCreamActive !important;
    }
@@ -163,6 +173,9 @@ button:focus {
    &:hover, &:focus {
       border: none;
       background-color: #d3d0ca !important;
+   }
+   &:focus {
+      box-shadow: $box-focus-cream;
    }
    &:active {
       background-color: #b8b5af !important;
@@ -272,7 +285,7 @@ button:focus {
       border-radius: 50px;
       letter-spacing: .2rem;
       transition: 0.2s ease-in;
-
+      
       &:hover {
          border: 2px solid $white;
          background-color: $white;
@@ -728,6 +741,7 @@ header > .navbar {
 
    .btn-cart:focus {
       background-color: $greenDarkAccent !important;
+      box-shadow: $box-focus-green;
       border: none;
       & svg > path {
          fill: $white;
@@ -909,8 +923,16 @@ header > .navbar {
       border-radius: 30px;
       color: $greenText;
       overflow-y: hidden;
-      &:focus {
+      transition: box-shadow 0.2s ease;
+      
+      &:focus, &:hover {
+         box-shadow: $box-focus-cream;
          outline: none;
+      }
+
+      &:valid {
+         box-shadow: $box-focus-green;
+         background-color: white;
       }
 
       &::placeholder {
