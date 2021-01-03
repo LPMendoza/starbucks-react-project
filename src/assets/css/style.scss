@@ -716,14 +716,15 @@ header > .navbar {
    }
 
    .product-name-card {
-      font-size: 18px;
+      font-size: 16px;
+      font-family: $fontTitleName;
       color: $greenDarkAccent;
       font-weight: bold;
       height: 48px;
    }
 
    .product-categorie-card {
-      font-size: 16px;
+      font-size: 14px;
       color: $greenText;
    }  
 
@@ -734,7 +735,7 @@ header > .navbar {
    }
 
    .product-price-card {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       color: $greenText;
    }
@@ -1059,6 +1060,7 @@ header > .navbar {
       font-weight: bold;
       font-size: 24px;
    }
+
 }
 
 
@@ -1075,6 +1077,7 @@ header > .navbar {
 #smoke-coffee-relax {
    animation: smokeUp 2s ease infinite;
 }
+
 
 @keyframes pointContact {
    0% {
