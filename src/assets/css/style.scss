@@ -540,7 +540,7 @@ header > .navbar {
    background-image: $imgFlowers;
    background-size: 100%;
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: 100% 50%;
 }
 
 .cont-cards-menu {
@@ -993,6 +993,8 @@ header > .navbar {
 
 .cont-products-card {
    display: flex;
+   height: 0px;
+   overflow: hidden !important;
    flex-wrap: wrap;
    animation: hideProducts 0.4s ease forwards;
 }
@@ -1163,7 +1165,7 @@ header > .navbar {
    to {
       opacity: 0;
       margin-right: -100%;
-      overflow-x: hidden;
+      overflow: hidden;
       pointer-events: none;
    }
 }
@@ -1430,7 +1432,7 @@ header > .navbar {
 @media screen and (max-width: 1196px) {
    .cont-cards-menu {
       margin-top: 0rem !important;
-      overflow-x: hidden;
+      overflow: hidden;
    }
 
    .cont-card-product {
@@ -1541,7 +1543,7 @@ header > .navbar {
    }
 
    .cont-cards-menu {
-      overflow-x: hidden;
+      overflow: hidden;
    }
 
    .footer {

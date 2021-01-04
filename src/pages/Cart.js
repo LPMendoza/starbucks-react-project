@@ -30,7 +30,7 @@ let Cart = () => {
       <React.Fragment>
          <NavBar pageActive={"cart"} />
          <section className="page bg-light-cream page-menu">
-            <article className="section-land section-magic mb-0 bg-light pb-5 pt-lg-3">
+            <article className="section-land mb-0 bg-light pb-5 pt-lg-3 article-menu">
                <div className="container">
                   <div className="row justify-content-center my-4">
 

@@ -5,6 +5,7 @@ import ProductCard from '../components/ProductCard.js';
 import ProductDetail from '../pages/ProductDetail.js';
 import imgMenu from "../assets/img/lading/img-banner-menu.png";
 import arrowSelect from '../assets/img/icons/arrow-select.png';
+import SvgWaveLight from '../components/SvgWaveLight.js';
 import config from '../config.js';
 
 let Menu = () => {
@@ -35,7 +36,7 @@ let Menu = () => {
                <div className="container">
                   <div className="row align-items-center justify-content-center">
                      <div className="cont-text-land col-12 col-md-6 px-2 px-md-0 text-center text-md-left">
-                        <h1>EL MEJOR MENÚ <span>PARA COMENZAR EL DÍA</span></h1>
+                        <h1>EL MEJOR MENÚ PARA <span>COMENZAR EL DÍA</span></h1>
                         <p className="text-primary mt-4 col-9 col-md-9 px-0">
                         Productos hechos con ingredientes de calidad para el deleite de tu paladar
                         </p>
@@ -55,6 +56,7 @@ let Menu = () => {
                </div>
             </div>
             <article className="bg-light article-menu pt-md-2 pb-5">
+
                <div className="container">
                   <div className="row">
                      <div className="cont-cards-menu col-12 px-0 d-flex align-items-start" >
