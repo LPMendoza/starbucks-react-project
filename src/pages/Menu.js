@@ -34,7 +34,7 @@ let Menu = () => {
             <article className="section-land section-magic mb-0 bg-light">
                <div className="container">
                   <div className="row align-items-center justify-content-center">
-                     <div className="cont-text-land col-12 col-md-6 px-10 text-center text-md-left">
+                     <div className="cont-text-land col-12 col-md-6 px-2 px-md-0 text-center text-md-left">
                         <h1>EL MEJOR MENÚ <span>PARA COMENZAR EL DÍA</span></h1>
                         <p className="text-primary mt-4 col-9 col-md-9 px-0">
                         Productos hechos con ingredientes de calidad para el deleite de tu paladar
@@ -64,7 +64,7 @@ let Menu = () => {
                         }
                         </div>
                         <div className={`col-12 px-0  ${!menuShowed ? "showProducts" : "cont-products-card"}`}>
-                           <div className="ctrlProducts mt-md-0 mb-md-5 mb-0 col-12">
+                           <div className="ctrlProducts mt-md-2 mb-md-5 mb-0 col-12">
                               <div className="cont-backmenu col-12 col-md-auto px-0">
                                  <button onClick={(e) => {
                                     setMenuShowed(true);

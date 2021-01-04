@@ -126,13 +126,13 @@ button:focus {
 }
 
 .btn-primary {
-  background-color: #018a57 !important;
+  background-color: #006241 !important;
   border: none;
 }
 
 .btn-primary:hover {
   border: none;
-  background-color: #006241 !important;
+  background-color: #00754A !important;
 }
 
 .btn-primary:focus {
@@ -207,7 +207,6 @@ button:focus {
 }
 
 .page {
-  background-color: #f9f9f9;
   -webkit-transition: 0.1 ease;
   transition: 0.1 ease;
   -webkit-animation: showPage 1s ease;
@@ -410,7 +409,7 @@ header > .navbar {
 }
 
 .cont-cart-menu .cart-count {
-  background-color: #018a57;
+  background-color: #006241;
   color: #fff;
   font-size: 12px;
   width: 16px;
@@ -587,8 +586,8 @@ header > .navbar {
 }
 
 .cont-cards-menu .cont-menu-img:hover {
-  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .cont-cards-menu .cont-menu-img .imgMenuBackground {
@@ -748,7 +747,7 @@ header > .navbar {
 }
 
 .card-product {
-  background: #fff;
+  background-color: #fff;
   min-width: 256px;
   min-height: 360px;
   margin: 1rem;
@@ -784,7 +783,7 @@ header > .navbar {
 .card-product .product-name-card {
   font-size: 16px;
   font-family: "Futura-Bold";
-  color: #00754A;
+  color: #006241;
   font-weight: bold;
   height: 48px;
 }
@@ -838,7 +837,7 @@ header > .navbar {
 }
 
 .card-product .btn-cart:focus {
-  background-color: #00754A !important;
+  background-color: #006241 !important;
   -webkit-box-shadow: 0px 0px 0px 3px #018a588e !important;
           box-shadow: 0px 0px 0px 3px #018a588e !important;
   border: none;
@@ -850,6 +849,10 @@ header > .navbar {
 
 .card-product .cart-plus {
   width: 28px;
+}
+
+.card-product .cart-plus > path {
+  fill: #006241;
 }
 
 .card-cart {
@@ -1246,7 +1249,7 @@ header > .navbar {
 }
 
 .page-product-detail h1 {
-  color: #00754A;
+  color: #006241;
 }
 
 .page-product-detail .product-price-detail {

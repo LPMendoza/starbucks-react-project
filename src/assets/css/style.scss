@@ -154,12 +154,12 @@ button:focus {
 }
 
 .btn-primary {
-   background-color: $greenAccent!important;
+   background-color: $greenDark !important;
    border: none;
 
    &:hover {
       border: none;
-      background-color: $greenDark !important;
+      background-color: $greenDarkAccent !important;
    }
 
    &:focus {
@@ -231,7 +231,6 @@ button:focus {
 }
 
 .page {
-   background-color: #f9f9f9;
    transition: 0.1 ease;
    animation: showPage 1s ease;
 }
@@ -405,7 +404,7 @@ header > .navbar {
    display: flex;
    align-items: center;
    .cart-count {
-      background-color: $greenAccent;
+      background-color: $greenDark;
       color: $white;
       font-size: 12px;
       width: 16px;
@@ -564,7 +563,7 @@ header > .navbar {
       background-color: $greenDarkDepth;
 
       &:hover {   
-         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+         transition: 0.2s ease;
       }
 
       .imgMenuBackground {
@@ -694,7 +693,7 @@ header > .navbar {
 }
 
 .card-product {
-   background: $white;
+   background-color: $white;
    min-width: 256px;
    min-height: 360px;
    margin: 1rem;
@@ -703,9 +702,8 @@ header > .navbar {
    justify-content: center;
    flex-direction: column;
    position: relative;
-   transition: 0.2s ease;
-
-   &:hover {
+      transition: 0.2s ease;
+      &:hover {
       box-shadow: 0px 10px 20px rgba(10, 10, 10, 0.05) !important;
       transition: 0.2s ease;
 
@@ -718,7 +716,7 @@ header > .navbar {
    .product-name-card {
       font-size: 16px;
       font-family: $fontTitleName;
-      color: $greenDarkAccent;
+      color: $greenDark;
       font-weight: bold;
       height: 48px;
    }
@@ -760,7 +758,7 @@ header > .navbar {
    }
 
    .btn-cart:focus {
-      background-color: $greenDarkAccent !important;
+      background-color: $greenDark !important;
       box-shadow: $box-focus-green;
       border: none;
       & svg > path {
@@ -770,6 +768,10 @@ header > .navbar {
 
    .cart-plus {
       width: 28px;
+
+      & > path {
+         fill: $greenDark;
+      }
    }
 
 }
@@ -1053,7 +1055,7 @@ header > .navbar {
    }
 
    h1 {
-      color: $greenDarkAccent;
+      color: $greenDark;
    }
 
    .product-price-detail{
