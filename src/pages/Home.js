@@ -40,7 +40,7 @@ let Home = () => {
                </div>
             </article>
             <article className="section-land-footer mt-3 pb-5">
-               <SvgWaveLight fill="#ffff"/>
+               <SvgWaveLight fill="#f9f9f9"/>
                <div className="container mt-5">
                   <div className="row align-items-center justify-content-center">
                      <div className="cont-text-land col-12 col-md-6 px-2 px-md-0 text-center text-md-left">
