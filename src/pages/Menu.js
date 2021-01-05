@@ -57,7 +57,7 @@ let Menu = () => {
 
                </div>
             </div>
-            <article className="pt-md-2 pb-5">
+            <article className="article-menu pt-md-2 pb-5">
 
                <div className="container">
                   <div className="row">
