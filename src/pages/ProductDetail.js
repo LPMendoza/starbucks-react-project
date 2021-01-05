@@ -4,33 +4,35 @@ const ProductDetail = ({product, handleOnClose, showed}) => {
   
   return (
     <div className={`bg-light-cream cont-page-details ${showed ? "showed-details" : ""}`}>
+      <div className="w-100 d-flex d-lg-none align-items-end justify-content-end mb-0">
+        <button
+          onClick={(e) => handleOnClose({ product: product, showed: false })}
+          className={`btn btnProductClose ml-md-4 mr-2 d-flex mt-2`}>
+          <span className="text-dark fas fa-times"></span>
+        </button>
+      </div>
       <div className={`bg-cream container-fluid page-product-detail d-flex`}>
+          
         <div className="row">
-          <div className="col-12 col-lg-6 bg-light-cream d-flex flex-column pb-lg-0 pb-4 pt-md-0 
+          <div className="col-12 col-lg-6 pb-4 bg-light-cream d-flex flex-column 
           justify-content-center align-items-center cont-img-details">
-            <div className="w-100 d-flex d-lg-none align-items-end justify-content-end mb-4">
-              <button
-                onClick={(e) => handleOnClose({ product: product, showed: false })}
-                className={`btn btn-light btnMenuClose ml-md-4 mr-lg-3 mr-sm-0 d-flex mt-2`}>
-                <span className="text-dark fas fa-times"></span>
-              </button>
-            </div>
+            
             <img src={product != null ? product.imgProduct : ""} alt="" className="w-50" />
           </div>
-          <div className="col-12 col-lg-6 d-flex flex-column justify-content-center bg-light cont-product-details-info">
+          <div className="col-12 col-lg-6 d-flex pl-md-5 px-4 flex-column justify-content-center bg-light cont-product-details-info">
             <div className={`cont-close-product-detail w-100 d-lg-flex d-none flex-column align-items-center justify-content-center`}>
               <div className="container px-0 d-flex justify-content-end">
                 <button
                   onClick={(e) => handleOnClose({ product: product, showed: false })}
-                  className={`btn btn-light btnMenuClose ml-md-4 mr-3 mr-sm-0 d-flex mt-2`}>
+                  className={`btn btn-light btnProductClose ml-md-4 mr-3 mr-sm-0 d-flex mt-2`}>
                   <span className="text-dark fas fa-times"></span>
                 </button>
               </div>
             </div>
-            <div className="col-md-10 col-12 px-0 cont-info-product mx-md-4 mb-4 mb-md-0">
+            <div className="col-md-10 col-12 px-0 cont-info-product mb-4 mb-md-0">
               <h1 className="mb-4 product-name-detail mt-4 mt-lg-0">{product != null ? product.productName : ""}</h1>
-              <p className="text-primary col-md-9 px-0 mb-md-4 product-description-detail">{product != null ? product.description : ""}</p>
-              <p className="text-primary product-price-detail mb-4">${parseFloat(product != null ? product.price : "").toFixed(2)}</p>
+              <p className="text-primary col-md-10 px-0 mb-md-4 product-description-detail">{product != null ? product.description : ""}</p>
+              <p className="text-primary product-price-detail mb-3 mb-md-5">${parseFloat(product != null ? product.price : "").toFixed(2)}</p>
 
               <button className="btn btn-primary rounded-pill px-lg-5 py-3 px-4">AGREGAR AL CARRITO
               <svg width="24px" className="ml-3" viewBox="0 0 354 323" fill="none" xmlns="http://www.w3.org/2000/svg">

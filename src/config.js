@@ -72,7 +72,20 @@ let config = {
       description: "Esta mezcla de té verde matcha premium endulzado, leche y hielo, rematada con crema batida endulzada, inspira un delicioso impulso y buenas vibraciones verdes.",
       imgProduct: imgGreen,
       price: 64.62
-    }
+    },{
+      productName: "Salted Caramel Mocha",
+      category: "Frappuccino",
+      description: "La leche al vapor y la salsa de moca se combinan con jarabe de toffeenut, luego se cubre con crema batida, salsa de caramelo y una mezcla de azúcar turbinado y sal marina. Un dulce aún más dulce con nuestro toque de sal",
+      imgProduct: imgCaramel,
+      price: 84.50
+    },
+    {
+      productName: "Pumpkin Spice Coffee",
+      category: "Frappuccino",
+      description: "La leche al vapor se combina con una mezcla de calabaza y sabores tradicionales de especias de otoño. Disfrútelo terminado con crema batida y cobertura de especias de calabaza.",
+      imgProduct: imgSpice,
+      price: 98.42
+    }, 
   ],
   cartItems: [{
     productName: "Salted Caramel Mocha",

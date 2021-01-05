@@ -32,14 +32,23 @@ let NavBar = ({pageActive}) => {
    const handleOnClick = (e) => {
       window.scrollTo(0, 0);
       document.body.style.overflow = 'unset';
-      document.documentElement.style.overflowY = 'unset';
+      document.documentElement.style.overflow = 'unset';
    }
 
    const showMenuClick = (e) => {
+      if(!showMenu) {
+         document.body.style.overflow = "hidden";
+         document.documentElement.style.overflow = "hidden";
+      }
+      else {
+         document.body.style.overflow = 'unset';
+         document.documentElement.style.overflow = 'unset';
+      }
       setShowMenu(showMenu ? false : true);
    }
 
    const showNavbar = () => {
+
       return "showNavBar";
    }
 
@@ -52,10 +61,10 @@ let NavBar = ({pageActive}) => {
          <nav className="bg-light navbar navbar-light navbar-expand-lg pt-2 mb-4">
             <div className="container px-0">
                <Link style={{ textDecoration: 'none' }} to={`${config.basePath}/`}>
-                  <span className="navbar-brand mr-lg-5">
+                  <a onClick={handleOnClick} className="navbar-brand mr-lg-5">
                      <img className="mr-2 logo-starbucks" src={Logo}></img>
                      STARBUCKS
-                  </span>
+                  </a>
                </Link>
                
                <div className="cont-cart-menu">

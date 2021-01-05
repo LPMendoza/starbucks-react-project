@@ -9,7 +9,7 @@ let Contact = () => {
       <React.Fragment>
          <NavBar pageActive={"contact"} />
          <section className="page bg-light page-menu">
-            <article className="section-land bg-light section-magic mb-5 pb-5 pt-3">
+            <article className="section-land bg-light mb-5 pb-5 pt-3">
                <div className="container">
                   <h4 className="text-dark text-center text-md-left">Contáctanos y dejanos tus comentarios</h4>
                   <div className="row justify-content-lg-between align-items-center mt-5">

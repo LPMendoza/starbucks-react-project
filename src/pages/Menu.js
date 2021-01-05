@@ -5,6 +5,8 @@ import ProductCard from '../components/ProductCard.js';
 import ProductDetail from '../pages/ProductDetail.js';
 import imgMenu from "../assets/img/lading/img-banner-menu.png";
 import arrowSelect from '../assets/img/icons/arrow-select.png';
+import WaveGradientLight from  "../assets/img/lading/wave-gradient-light.png";
+import SvgMenuGirl from '../components/SvgMenuGirl.js';
 import config from '../config.js';
 
 let Menu = () => {
@@ -31,22 +33,23 @@ let Menu = () => {
       <React.Fragment>
          <NavBar pageActive={"menu"} />
          <section className="page bg-light page-menu">
-            <article className="section-land section-magic mb-0 bg-light">
+            <article className="section-land mb-0 pb-2 bg-light">
                <div className="container">
                   <div className="row align-items-center justify-content-center">
-                     <div className="cont-text-land col-12 col-md-6 px-10 text-center text-md-left">
-                        <h1>EL MEJOR MENÚ <span>PARA COMENZAR EL DÍA</span></h1>
+                     <div className="cont-text-land col-12 col-md-6 px-2 px-md-0 text-center text-md-left">
+                        <h1>EL MEJOR MENÚ PARA <span>EMPEZAR <br class="d-md-flex d-none"/>TU DÍA</span></h1>
                         <p className="text-primary mt-4 col-9 col-md-9 px-0">
                         Productos hechos con ingredientes de calidad para el deleite de tu paladar
                         </p>
                      </div>
                      <div className="col-10 col-md-6 px-0 d-flex justify-content-end">
-                        <img src={imgMenu} className="img-fluid"/>
+                        <SvgMenuGirl/>
                      </div>
                   </div>
                </div>
             </article>
-            <div className="container mt-5" id="cont-menu-products">
+            <img className="img-fluid wave-gradient-ligth" src={WaveGradientLight}/>
+            <div className="container mt-md-4" id="cont-menu-products">
                <div className="row align-items-center justify-content-beetween px-3" >
                   <h3 className="col-12 text-center mt-5 mb-lg-5 mb-4">
                      {menuShowed ? "SELECCIONA UNA CATEGORÍA" : "BEBIDAS DE CALIDAD PARA TI"}
@@ -54,7 +57,8 @@ let Menu = () => {
 
                </div>
             </div>
-            <article className="bg-light article-menu pt-md-2 pb-5">
+            <article className="pt-md-2 pb-5">
+
                <div className="container">
                   <div className="row">
                      <div className="cont-cards-menu col-12 px-0 d-flex align-items-start" >
@@ -64,7 +68,7 @@ let Menu = () => {
                         }
                         </div>
                         <div className={`col-12 px-0  ${!menuShowed ? "showProducts" : "cont-products-card"}`}>
-                           <div className="ctrlProducts mt-md-0 mb-md-5 mb-0 col-12">
+                           <div className="ctrlProducts mt-md-2 mb-md-5 mb-0 col-12">
                               <div className="cont-backmenu col-12 col-md-auto px-0">
                                  <button onClick={(e) => {
                                     setMenuShowed(true);
